@@ -1,0 +1,2 @@
+# Challenge Escala
+se muestra un diseño en figma de varias vistas de interfaces, luego de revisar, realiza el código frontend utilizando Bootstrap de tal forma que logres replicar con código los diseños he interacciones que se proponen en el diseño. Eres libre de desarrollar las paginas que consideres necesarias.
