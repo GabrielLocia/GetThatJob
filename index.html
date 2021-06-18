@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600&family=Nunito:wght@400;700&family=Overpass:wght@300;700&display=swap"
       rel="stylesheet"
     />
+
     <!-- Bootstrap CSS -->
     <link href="css/style.css" rel="stylesheet" />
 
@@ -21,13 +22,13 @@
     <header>
       <div class="container-fluid">
         <nav
-          class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+          class="navbar navbar-expand-lg navbar-light bg-white border-bottom nav-height "
         >
-          <div class="container mrg">
+          <div class="container ml">
             <a class="navbar-brand" href="#">
               <img src="assets/Logo.svg" alt="" />
             </a>
-            <div>
+            <div class="header-me">
               <button
                 class="navbar-toggler"
                 type="button"
@@ -64,7 +65,10 @@
                         />
                       </svg>
                     </a>
-                    <ul class="dropdown-menu link-menu-header" aria-labelledby="navbarDropdown">
+                    <ul
+                      class="dropdown-menu link-menu-header"
+                      aria-labelledby="navbarDropdown"
+                    >
                       <li><a class="dropdown-item" href="#">Recruiter</a></li>
                       <li>
                         <a class="dropdown-item" href="#">Professional</a>
@@ -94,7 +98,10 @@
                         />
                       </svg>
                     </a>
-                    <ul class="dropdown-menu link-menu-header" aria-labelledby="navbarDropdown">
+                    <ul
+                      class="dropdown-menu link-menu-header"
+                      aria-labelledby="navbarDropdown"
+                    >
                       <li><a class="dropdown-item" href="#">Recruiter</a></li>
                       <li>
                         <a class="dropdown-item" href="#">Professional</a>
@@ -109,6 +116,122 @@
       </div>
     </header>
     <!-- Heder -->
+    <main>
+
+      <!--  Banner-->
+      <div class="container d-flex ml">
+        <div class="banner-grup1 align-self-center">
+          <p class="banner-title">The place where you get that job</p>
+
+          <p class="banner-text">
+            With our Machine learning algorithm you will get that job in no
+            time, We promise you! Just give us the money and we will take care
+            of it.
+          </p>
+
+          <button class="btn btn-primary mt-3 banner-button">
+            Create your account now
+          </button>
+        </div>
+
+        <div class="banner-grup2">
+          <img src="assets/image 1.png" alt="" />
+        </div>
+      </div>
+      <!--  Banner-->
+
+      <!-- after-Banner -->
+      <div class="bg-primary after-banner-height">
+        <div class="container ml">
+          <div class="row">
+            <div class="col-6 after-banner">
+              <p class="after-banner-title">Find your next tech job</p>
+              <p class="after-banner-text">
+                Our Machine learning algorithm is so good that it’s even illegal
+                in some countries. Join us to use our barelly legal algorithm
+                that is actually a group of interns that work on our basement.
+                <br />
+                <br />We have a job for you, no matter your background or
+                previous experience. Is sending random memes through chat your
+                only skill? That’s ok, we got you, our Rock Star Meme Curator
+                role is here for you.
+              </p>
+            </div>
+            <div class="col after-banner2 d-flex flex-column">
+              <div class="after-banner-item">
+                <img src="assets/Frame 6.svg" alt="">
+              </div>
+              <div class="after-banner-item">
+                <img src="assets/Frame 6.svg" alt="">
+              </div>
+              <div class="after-banner-item">
+                <img src="assets/Frame 6.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- after-Banner -->
+
+      <!-- Testimonials  -->
+        <div class="d-flex justify-content-center testimonial">
+
+          
+          <div class="align-self-center d-flex flex-column ">
+            <img src="assets/Img Girl Flowers.png" class="align-self-center" alt="">
+           <h2>
+            “Amazing experience, I love it a lot. Thanks to the team 
+            I got that Job, great!”
+           </h2>
+           <h5>
+            Lassy Chester
+           </h5>
+           <h6>
+            Art Director
+           </h6>
+          </div>
+         
+        </div>
+      <!-- Testimonials  -->
+
+      <!-- Contacts -->
+      <div class="contacts-height">
+        <div class="container ml">
+          <div class="row">
+            <div class="col-4 contacts-grup1">
+              <p class="contacts-p">CONTACTS</p>
+              <h1>Get in Touch</h1>
+              <p>If you are not sure yet, shoot us a message!</p>
+              <div>
+                <h6 class="contacts-email">hello@getthatjob.com</h6>
+                <h6>Jose Galvez 692, 7th Floor. The Board</h6>
+              </div>
+            </div>   
+            <!-- Formulario -->
+            <div class="col contacts-grup2 d-flex flex-column justify-content-end"> 
+              <div class="mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Messages"></textarea>
+              </div>
+              <button class="btn d-flex align-items-center">
+                <img src="assets/Envelope.svg" alt="">
+                <span class="d-flex align-items-center">
+                  Submid Message
+                </span>
+              </button>
+            </div>
+              <!-- Formulario -->
+          </div>
+        </div>
+      </div>
+      <!-- Contacts -->
+
+    </main>
 
     <script src="libs/bootstrap-5.0.1/dist/js/bootstrap.min.js"></script>
   </body>

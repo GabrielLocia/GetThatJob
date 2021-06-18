@@ -1,0 +1,37 @@
+.banner-grup1 {
+    // margin-top: 190px ;
+    width: 531px;
+    height: 285px;
+    .banner-title {
+      width: 364px;
+      height: 126px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 46px;
+      line-height: 63px;
+      color: #000000;
+    }
+  
+    .banner-text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.25rem;
+      line-height: 27px;
+      color: #000000;
+      margin: 0px 0px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  
+    .banner-button {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: 4px;
+    }
+  }
+  
+  .banner-grup2 {
+    width: 492px;
+    height: 36.3125rem;
+    img {
+      width: 100%;
+    }
+  }

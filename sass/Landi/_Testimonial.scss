@@ -1,0 +1,35 @@
+$fon2: 'Overpass', sans-serif;
+.testimonial {
+
+  background-color: white;
+  padding-top: 88px;
+  div{
+    margin-left: 60px;
+    margin-bottom: 75px;
+  }
+  h2 {
+    margin: 8px;
+    text-align: center;
+    font-family: $fon2;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 48px;
+    width: 905px;
+  }
+  h5{
+    font-family: $fon2;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+  h6{
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+}

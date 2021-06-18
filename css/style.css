@@ -11471,6 +11471,7 @@ body {
           box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
+  background-color: #f7fafc;
 }
 
 *,
@@ -11491,8 +11492,21 @@ h2, .h2 {
 }
 
 /*******site Style ***/
-.mrg {
-  margin: 0 209px;
+.ml {
+  margin-left: 200px;
+}
+
+/****Header****/
+header div {
+  padding-left: 0;
+}
+
+.nav-height {
+  height: 100px;
+}
+
+.header-me {
+  margin-right: 160px;
 }
 
 .link-header {
@@ -11530,4 +11544,218 @@ h2, .h2 {
 .link-me {
   margin-right: 20px;
 }
+
+/****Header****/
+/****Banner******/
+.banner-grup1 {
+  width: 531px;
+  height: 285px;
+}
+
+.banner-grup1 .banner-title {
+  width: 364px;
+  height: 126px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 63px;
+  color: #000000;
+}
+
+.banner-grup1 .banner-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 27px;
+  color: #000000;
+  margin: 0px 0px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner-grup1 .banner-button {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
+}
+
+.banner-grup2 {
+  width: 492px;
+  height: 36.3125rem;
+}
+
+.banner-grup2 img {
+  width: 100%;
+}
+
+/****Banner******/
+/****After-Banner*/
+.after-banner-height {
+  height: 394px;
+}
+
+.after-banner-height .after-banner {
+  height: 286px;
+  margin-top: 54px;
+  padding: 0;
+}
+
+.after-banner-height .after-banner .after-banner-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 49px;
+  color: #ffffff;
+}
+
+.after-banner-height .after-banner .after-banner-text {
+  width: 515px;
+  height: 200px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  -webkit-font-feature-settings: 'pnum' on, 'onum' on;
+          font-feature-settings: 'pnum' on, 'onum' on;
+  color: #ffffff;
+}
+
+.after-banner-height .after-banner2 {
+  margin-top: 54px;
+  padding: 0;
+}
+
+.after-banner-height .after-banner2 .after-banner-item {
+  margin-bottom: 20px;
+}
+
+/****After-Banner*/
+/****Testimonial*/
+.testimonial {
+  background-color: white;
+  padding-top: 88px;
+}
+
+.testimonial div {
+  margin-left: 60px;
+  margin-bottom: 75px;
+}
+
+.testimonial h2, .testimonial .h2 {
+  margin: 8px;
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 48px;
+  width: 905px;
+}
+
+.testimonial h5, .testimonial .h5 {
+  font-family: "Overpass", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.testimonial h6, .testimonial .h6 {
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/****Testimonial*/
+/****Contacts****/
+.contacts-height {
+  background-color: #f7fafc;
+  height: 571px;
+  font-family: "Overpass", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.contacts-height .contacts-grup1 {
+  width: 322.42px;
+  height: 371px;
+  padding: 0;
+  margin: 100px 0;
+}
+
+.contacts-height .contacts-grup1 .contacts-p {
+  margin-bottom: 8px;
+  color: #999999;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.contacts-height .contacts-grup1 h1, .contacts-height .contacts-grup1 .h1 {
+  width: 322.42px;
+  height: 64px;
+  font-size: 46px;
+  line-height: 64px;
+  /* identical to box height, or 139% */
+  letter-spacing: -1.5px;
+}
+
+.contacts-height .contacts-grup1 p {
+  margin: 11px 0 172px 0;
+  font-size: 15px;
+  line-height: 32px;
+}
+
+.contacts-height .contacts-grup1 div h6, .contacts-height .contacts-grup1 div .h6 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contacts-height .contacts-grup2 {
+  margin: 100px 0 100px 203.3px;
+}
+
+.contacts-height .contacts-grup2 div input,
+.contacts-height .contacts-grup2 div textarea {
+  width: 495.27px;
+  height: 60px;
+}
+
+.contacts-height .contacts-grup2 div textarea {
+  height: 150px;
+}
+
+.contacts-height .contacts-grup2 button {
+  width: 197.04px;
+  height: 60px;
+  margin-top: 19px;
+  background-color: #000000;
+}
+
+.contacts-height .contacts-grup2 button img {
+  margin: 19px 18px 19px 10px;
+}
+
+.contacts-height .contacts-grup2 button span {
+  width: 140.22px;
+  height: 48px;
+  color: white;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-right: 0px;
+  border-left-width: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.contacts-height .contacts-grup2 .form-control {
+  color: #7A7A7A;
+}
+
+/****Contacts****/
 /*# sourceMappingURL=style.css.map */

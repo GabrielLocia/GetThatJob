@@ -1,0 +1,37 @@
+.after-banner-height {
+    height: 394px;
+    .after-banner {
+      height: 286px;
+      margin-top: 54px;
+      padding: 0;
+      .after-banner-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 49px;
+  
+        color: #ffffff;
+      }
+  
+      .after-banner-text {
+        width: 515px;
+        height: 200px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        font-feature-settings: 'pnum' on, 'onum' on;
+       
+        color: #ffffff;
+      }
+    }
+  
+    .after-banner2{
+      margin-top: 54px;
+      padding: 0;
+      .after-banner-item{
+        margin-bottom: 20px;
+      }
+    }
+  }
+  

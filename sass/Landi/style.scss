@@ -1,0 +1,65 @@
+$fon: 'Nunito', sans-serif;
+
+$fon3: 'Advent Pro', sans-serif;
+
+$Daybreak-Blue: #3c2dff;
+$job-posting-grey: #718096;
+$job-posting-title: #4a5568;
+$primary: $Daybreak-Blue;
+$secondary: rgba($Daybreak-Blue, 0.69);
+
+$Gray-1: #ffff;
+$Gray-6: #bfbfbf;
+$Gray-8: #595959;
+$Gray-9: #262626;
+
+@import '../../libs/bootstrap-5.0.1/scss/bootstrap';
+
+/******Reset****/
+body {
+  box-sizing: border-box;
+  font-family: $fon;
+  font-size: 16px;
+  background-color: #f7fafc;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.875rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+/*******site Style ***/
+.ml{
+  margin-left: 200px
+}
+
+/****Header****/
+@import 'Header';
+/****Header****/
+
+/****Banner******/
+@import 'Banner';
+/****Banner******/
+
+/****After-Banner*/
+@import 'After-Banner';
+/****After-Banner*/
+
+/****Testimonial*/
+@import 'Testimonial';
+/****Testimonial*/
+
+/****Contacts****/
+@import 'Contacts';
+/****Contacts****/

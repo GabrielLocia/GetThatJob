@@ -1,0 +1,95 @@
+$fon2: 'Overpass', sans-serif;
+.contacts-height {
+  background-color: #f7fafc;
+  height: 571px;
+  font-family: $fon2;
+  font-style: normal;
+  font-weight: bold;
+
+  .contacts-grup1 {
+    width: 322.42px;
+    height: 371px;
+    padding: 0;
+    margin: 100px 0;
+    .contacts-p {
+      margin-bottom: 8px;
+      color: #999999;
+      font-size: 13px;
+      line-height: 20px;
+    }
+    h1 {
+      width: 322.42px;
+      height: 64px;
+      font-size: 46px;
+      line-height: 64px;
+      /* identical to box height, or 139% */
+
+      letter-spacing: -1.5px;
+    }
+    p {
+      margin: 11px 0 172px 0;
+
+      font-size: 15px;
+      line-height: 32px;
+    }
+    div {
+      h6 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .contacts-grup2 {
+    margin: 100px 0 100px 203.3px;
+
+    div {
+      
+        input,
+      textarea {
+        width: 495.27px;
+        height: 60px;
+      }
+
+      textarea {
+        height: 150px;
+      }
+    }
+
+    button {
+      width: 197.04px;
+      height: 60px;
+      margin-top: 19px;
+      background-color: #000000;
+
+      img {
+        margin: 19px 18px 19px 10px;
+      }
+      span {
+        width: 140.22px;
+        height: 48px;
+        color: white;
+
+        margin-top: 6px;
+
+        margin-bottom: 6px;
+        margin-right: 0px;
+        border-left-width: 0px;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 32px;
+        text-align: center;
+      }
+    }
+    .form-control{
+        color: #7A7A7A;
+    }
+  }
+
+
+
+}
+
