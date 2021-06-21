@@ -1,0 +1,63 @@
+$backgroug: #f7fafc;
+.application {
+  position: relative;
+  height: 1355px;
+
+  .application-button-table {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    opacity: 0;
+  }
+  .modal {
+    width: 1440px;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    height: 1507px;
+    .modal-application {
+      position: absolute;
+      width: 1024px;
+      max-width: 1024px;
+      height: 1347px;
+      left: 208px;
+      top: 80px;
+
+      .modal-header {
+        width: 824px;
+        height: 40px;
+        margin-left: 200px;
+        padding: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        .modal-app-button {
+            margin-top: 20px;
+          width: 120px;
+          height: 35px;
+          padding: 0;
+        }
+      }
+
+      .modal-body {
+        padding: 0;
+        background-color: $backgroug;
+      }
+    }
+  }
+}
+
+.nav-links{
+    background: none;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.nav-pills .nav-links.active{
+    
+    background-color:white !important;
+    border: 0;
+    border-radius: 0.25rem;
+    border-bottom: 1px solid #3c2dff;
+}
