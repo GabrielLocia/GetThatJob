@@ -265,28 +265,137 @@ main {
       background-color: $backgroug;
 
       .job-details-modal {
-        
         height: 1408px;
         width: 100%;
-        background-color: seagreen;
+        background-color: $backgroug;
         margin-left: 88px;
         margin-top: 64px;
         #modal-button-return {
           border: 0;
+          padding: 0;
+          margin-bottom: 20px;
           background-color: $backgroug;
           color: $Daybreak-Blue;
           font-style: normal;
           font-weight: normal;
-          font-size: 16px;
-          line-height: 24px;
-          img{
+          font-size: 1rem;
+          line-height: 1.5rem;
+          img {
             margin-left: 8px;
+          }
+        }
+        .modal-checkable {
+          margin-top: 9px;
+          margin-bottom: 24px;
+          .check {
+            padding: 1px 8px;
+            font-size: 12px;
+            line-height: 20px;
+            border: 1px solid #3c2dff;
+            margin-bottom: 0;
+            margin-right: 5px;
+          }
+        }
+
+        .size {
+          width: 650px;
+          height: 120px;
+        }
+        ul {
+          padding-left: 20px;
+          margin-bottom: 24px;
+        }
+
+        .modal-jobDetails-head {
+          font-size: 24px;
+          line-height: 24px;
+          color: #000000;
+          width: 333px;
+          height: 26px;
+          margin-bottom: 24px;
+        }
+
+        .date {
+          width: 104px;
+          height: 24px;
+          padding: 0;
+          margin: 0;
+        }
+        .modal-grup1 {
+          width: 650px;
+        }
+
+        .modal-jobDetails-head {
+          width: 340px;
+        }
+
+        .modal-grup2 {
+          width: 250px;
+          margin-left: 40px;
+          height: 385px;
+          background: #ffffff;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .grup21 {
+          margin-left: 63px;
+          margin-top: 40px;
+          margin-right: 62px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #000000;
+          .modal-company-name {
+            font-size: 1.75rem;
+            line-height: 2.375;
+            height: 2.375rem;
+            margin-bottom: 12px;
+            
+          }
+          p {
+            margin-bottom: 0;
+          }
+
+          span {
+            img {
+              padding-bottom: 4px;
+              margin-right: 4px;
+            }
+          }
+          a {
+            margin-top: 4px;
+            width: 8rem;
+            height: 24px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 24px;
+            color: #000;
+          }
+
+          .modal-posted-job{
+            margin-top: 4px;
+          }
+
+          .gu21{
+            width: 186px;
+            height: 40px;
+            margin-top: 41px;
+            margin-bottom: 16px;
+          }
+
+          .line{
+            width: 186px;
+            padding-top: 16px;
+            border-top: 1px solid black;
+            text-align: center;
           }
         }
       }
     }
 
-      .modal-get-this-job {
+    .modal-get-this-job {
       // display: none;
       position: absolute;
       top: 0;
@@ -294,14 +403,13 @@ main {
       width: 100%;
       height: 1874px;
       background-color: $backgroug;
-
-      }
+    }
 
     .none {
       display: none;
     }
 
-    .modal-active{
+    .modal-active {
       display: block;
     }
   }
@@ -317,5 +425,3 @@ main {
   color: $Gray-8;
   background-color: $backgroug !important;
 }
-
-

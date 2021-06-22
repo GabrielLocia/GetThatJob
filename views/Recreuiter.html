@@ -22,7 +22,7 @@
     <!-- Bootstrap CSS -->
     <link href="../css/style.css" rel="stylesheet" />
 
-    <title>Recluter</title>
+    <title>Recreuiuter</title>
   </head>
   <body>
     <!-- Heder -->
@@ -56,22 +56,14 @@
                 <ul class="navbar-nav">
                   <li class="nav-item dropdown">
                     <a
-                      class="
-                        nav-link
-                        text
-                        link-header link-black
-                        d-flex
-                        align-items-center
-                      "
+                      class="nav-link text link-header link-black p-0"
                       href="#"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <p style="margin-bottom: 0" id="company-name">
-                        mycompany
-                      </p>
+                      mycompany
                       <svg
                         width="12"
                         height="12"
@@ -121,10 +113,10 @@
             class="nav-link active sidebar-button-jobForYou"
             id="jobsForYou-button"
             data-bs-toggle="pill"
-            data-bs-target="#job-for-you"
+            data-bs-target="#jobs"
             type="button"
             role="tab"
-            aria-controls="job-for-you"
+            aria-controls="jobs"
             aria-selected="true"
           >
             <img src="../assets/inbox.svg" alt="" />
@@ -156,6 +148,8 @@
             <img src="../assets/user.svg" alt="" />
             Your Profile
           </button>
+
+          
         </div>
         <!-- Sidebar-Controls -->
 
@@ -163,8 +157,8 @@
         <div class="tab-content w-100 sidbar-conten" id="v-pills-tabContent">
           <!-- jobs-for-you -->
           <div
-            class="tab-pane fade show active border-primary jobs-for-you"
-            id="job-for-you"
+            class="tab-pane fade show active border-primary jobs-for-you jobs"
+            id="jobs"
             role="tabpanel"
             aria-labelledby="jobs-for-you"
           >
@@ -174,7 +168,7 @@
             </div>
             <button
               id="button-new-jobs"
-              class="btn btn-primary"
+              class="btn btn-primary rounded-0"
               style="margin-left: 104px"
             >
               New Jobs
@@ -185,16 +179,24 @@
             <div class="job-button-result">
               <div class="list-group" id="button-selection-job">
                 <button
-                  id="job-button-result"
-                  type="button"
                   class="
+                    style-importan
+                    nav-link
+                    sidebar-button-user
                     list-group-item list-group-item-action
                     button-selection
                     d-flex
+                    
                   "
-                  aria-current="true"
+                  id="jobsCanditaes-button"
+                  data-bs-toggle="pill"
+                  data-bs-target="#modal-job-canditates"
+                  type="button"
+                  role="tab"
+                  aria-controls="modal-job-canditates"
+                  aria-selected="false"
                 >
-                  <div class="job-compani d-flex" style="margin-left: 20px">
+                  <div class="job-compani d-flex justify-content-center align-items-center" style="margin-left: 20px">
                     <span class="d-flex flex-column">
                       <p class="job-title">Sofware Engineere</p>
                       <span class="d-flex">
@@ -204,13 +206,13 @@
                     </span>
                   </div>
                   <p
-                    class="number-applicats"
-                    id="number-applicants"
-                    style="width: 132px; height: 32px; margin-bottom: 0"
+                    class="number-applications align-self-center"
+                    id="number-applicatios"
+                    
                   >
                     3 applicants
                   </p>
-                  <div class="job-grup2 d-flex align-items-center">
+                  <div class="job-grup2 marg-ride d-flex align-items-center">
                     <p class="job-grade c" id="status">Open</p>
                     <p class="date" id="publication-date">Posted Today</p>
                   </div>
@@ -411,23 +413,24 @@
                   Between 150 and 1000 characters.
                 </p>
               </div>
-              <button id="new-job-button-post" class="btn btn-primary">Post this job!</button>
+              <button id="new-job-button-post" class="btn btn-primary">
+                Post this job!
+              </button>
             </div>
-            
           </div>
           <!--end of Jobs for you-->
 
-          <!-- Your Application -->
+          <!-- Candidates -->
           <div
-            class="tab-pane fade application"
+            class="tab-pane fade application modal-candidates-details w-75"
             id="your-applications"
             role="tabpanel"
             aria-labelledby="v-pills-profile-tab"
           >
-            <p class="application-title">Candidates</p>
+            <p class="application-title marg-b fw-bold fs-2">Candidates</p>
 
-            <table class="table">
-              <thead>
+            <table class="table table-hover table-responsive-sm ">
+              <thead class="table-light">
                 <tr>
                   <th scope="col">Name</th>
                   <th scope="col">Email</th>
@@ -438,15 +441,17 @@
               </thead>
               <tbody>
                 <tr class="row-application-job">
-                  <button
+              
+                  <td>John Doe
+                    <button
                     type="button"
-                    class="btn btn-primary application-button-table"
+                    class="btn btn-primary application-button-table flot"
                     data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
+                    data-bs-target="#internal-modal-appDetails"
                   >
-                  asdasdasdasdasdasdasddas
+                    asdasdasdasdasdasdasddas
                   </button>
-                  <td>John Doe</td>
+                  </td>
                   <td>jhon@gmail.com</td>
                   <td>987456123</td>
                   <td>Software Developer</td>
@@ -460,7 +465,7 @@
             <!-- Modal -->
             <div
               class="modal fade"
-              id="staticBackdrop"
+              id="internal-modal-appDetails"
               data-bs-backdrop="static"
               data-bs-keyboard="false"
               tabindex="-1"
@@ -854,363 +859,56 @@
             </div>
           </div>
           <!-- End of Your Profile -->
+
+          <!-- Modal-  Job-Candidates en elemento de la tabla sidebar -->
           <div
-            class="tab-pane fade"
-            id="v-pills-settings"
+            class="tab-pane fade application modal-candidates-details w-75"
+            id="modal-job-canditates"
             role="tabpanel"
             aria-labelledby="v-pills-settings-tab"
           >
-          <div class="modal-job-details none " id="modal-job-details">
-            <div class="application">
-             <p class="application-title">Your Applications</p>
- 
-             <table class="table">
-               <thead>
-                 <tr>
-                   <th scope="col">Title</th>
-                   <th scope="col">Type</th>
-                   <th scope="col">Company</th>
-                   <th scope="col">City</th>
-                   <th scope="col">Data sent</th>
-                 </tr>
-               </thead>
-               <tbody>
-                 <tr class="row-application-job">
-                   <button
-                     type="button"
-                     class="btn btn-primary application-button-table"
-                     data-bs-toggle="modal"
-                     data-bs-target="#staticBackdrop"
-                   >
-                     Launch static backdrop modal
-                   </button>
-                   <td>Software Engineer</td>
-                   <td>Full Time</td>
-                   <td>Able.co</td>
-                   <td>Lima</td>
-                   <td>Agust 10, 2020</td>
-                 </tr>
-               </tbody>
-             </table>
-             <!-- Modal -->
-             <div
-               class="modal fade"
-               id="staticBackdrop"
-               data-bs-backdrop="static"
-               data-bs-keyboard="false"
-               tabindex="-1"
-               aria-labelledby="staticBackdropLabel"
-               aria-hidden="true"
-             >
-               <div class="modal-dialog modal-application">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <ul
-                       class="nav nav-pills mb-3"
-                       id="pills-tab"
-                       role="tablist"
-                     >
-                       <li class="nav-item" role="presentation"></li>
-                       <li class="nav-item" role="presentation">
-                         <button
-                           class="nav-links modal-app-button"
-                           id="modal-app-button"
-                           data-bs-toggle="pill"
-                           data-bs-target="#modal-application"
-                           type="button"
-                           role="tab"
-                           aria-controls="modal-applicantion"
-                           aria-selected="false"
-                         >
-                           Application
-                         </button>
-                       </li>
-                       <li class="nav-item" role="presentation">
-                         <button
-                           class="nav-links modal-app-button"
-                           id="modal-app-jobDetailsB"
-                           data-bs-toggle="pill"
-                           data-bs-target="#job-details"
-                           type="button"
-                           role="tab"
-                           aria-controls="job-details"
-                           aria-selected="false"
-                         >
-                           Job Details
-                         </button>
-                       </li>
-                     </ul>
-                     <button
-                       type="button"
-                       class="btn-close"
-                       data-bs-dismiss="modal"
-                       aria-label="Close"
-                     ></button>
-                   </div>
-                   <div class="modal-body d-flex">
-                     <!-- Sidebar-Controls -->
-                     <div
-                       class="nav flex-column nav-pills sidebar-buttons"
-                       id="v-pills-tab"
-                       role="tablist"
-                       aria-orientation="vertical"
-                     >
-                       <p class="modal-title-job">Software Engineer</p>
-                       <button
-                         class="nav-link sidebar-button-jobForYou"
-                         id="v-pills-home-tab"
-                         data-bs-toggle="pill"
-                         data-bs-target="#moda-application"
-                         type="button"
-                         role="tab"
-                         aria-controls="modal-applicantion"
-                         aria-selected="true"
-                       >
-                         <img src="../assets/inbox.svg" alt="" />
-                         Edit Application
-                       </button>
-                       <button
-                         class="nav-link sidebar-button-application"
-                         id="v-pills-profile-tab"
-                         data-bs-toggle="pill"
-                         data-bs-target="#v-pills-profile"
-                         type="button"
-                         role="tab"
-                         aria-controls="v-pills-profile"
-                         aria-selected="false"
-                       >
-                         <img src="../assets/solution.svg" alt="" />
-                         Whithdraw application
-                       </button>
-                     </div>
-                     <div class="tab-content" id="pills-tabContent">
-                       <div
-                         class="tab-pane fade show active"
-                         id="modal-application"
-                         role="tabpanel"
-                         aria-labelledby="pills-home-tab"
-                       >
-                         <div class="modal-app-profesionalExperience">
-                           <p class="modal-app-professional-title">
-                             Profesional Experience
-                           </p>
- 
-                           <p
-                             class="modal-app-professional-content"
-                             id="modal-app-professional-content"
-                           >
-                             This is the professional experience the candidate
-                             wrote on their application. It could be several
-                             lines long. :D
-                           </p>
- 
-                           <p class="modal-app-professional-title">
-                             Why are you interested in working at Able.co?
-                           </p>
-                           <p
-                             class="modal-app-professional-content"
-                             id="modal-app-proIntersted"
-                           >
-                             This is the awnser the applicant wrote.
-                           </p>
-                         </div>
-                       </div>
-                       <div
-                         class="tab-pane fade"
-                         id="job-details"
-                         role="tabpanel"
-                         aria-labelledby="job-details"
-                       >
-                         .l.
- 
-                         <div class="job-details-modal d-flex">
-                           <div class="modal-grup1">
-                             <p class="modal-description">
-                               Able is seeking a Full-Stack Software Engineer.
-                               You will work on a variety of challenging,
-                               creative and innovative products that are part of
-                               our rapidly growing portfolio. Your experience
-                               will serve as a foundation for your growth at our
-                               company and we expect that you will keep
-                               developing your existing skills by growing your
-                               knowledge in areas you had never envisioned
-                               before.
-                             </p>
- 
-                             <div class="modal-expected-of-you">
-                               <ul>
-                                 <li>
-                                   Build server-side applications as well as
-                                   RESTful APIs with Ruby and Rails
-                                 </li>
-                                 <li>
-                                   Build client-side applications with React,
-                                   Redux, HTML5 and CSS3/SASS
-                                 </li>
-                                 <li>
-                                   Collaborate with a super talented team of
-                                   Engineers
-                                 </li>
-                                 <li>
-                                   Develop and exercise your understanding of UX
-                                   & UI design best practices
-                                 </li>
-                                 <li>
-                                   Use the test-driven development paradigm
-                                 </li>
-                                 <li>
-                                   Build server-side applications as well as
-                                   RESTful APIs with Ruby and
-                                 </li>
-                               </ul>
-                             </div>
- 
-                             <div class="modal-looking-for">
-                               <ul>
-                                 <li>
-                                   You have a passion for collaborative problem
-                                   solving and the willingness to challenge,
-                                   debate and form relationships with team
-                                   members
-                                 </li>
-                                 <li>
-                                   You know what you don’t know, you have no
-                                   problem admitting it, and you’re eager to do
-                                   whatever it takes to address that gap
-                                 </li>
-                                 <li>
-                                   You have a desire to improve Able’s product
-                                   development practices and the experience to
-                                   follow-through on implementation
-                                 </li>
-                               </ul>
-                             </div>
- 
-                             <div class="modal-Job-requirements">
-                               <ul>
-                                 <li>
-                                   2+ years professional experience as a software
-                                   engineer or equivalent
-                                 </li>
-                                 <li>
-                                   Thorough and up-to-date knowledge of
-                                   JavaScript and/or Ruby/Rails
-                                 </li>
-                                 <li>
-                                   Understanding of MVC architectures and
-                                   databases such as PostgreSQL and Redis
-                                 </li>
-                                 <li>
-                                   Sufficient HTML and CSS skills to be able to
-                                   work with designers to transform prototypes
-                                 </li>
-                                 <li>
-                                   Experience building modern, responsive and
-                                   interactive web applications using frameworks
-                                   such as React
-                                 </li>
-                                 <li>
-                                   Professional proficiency in written and spoken
-                                   English
-                                 </li>
-                               </ul>
-                             </div>
- 
-                             <div class="modal-about-able">
-                               <p class="modal-about-text">
-                                 Able builds technology products in a portfolio
-                                 model. We believe that people, teams, and
-                                 processes are more important than the ideas
-                                 themselves, so we’ve focused on bringing great
-                                 people together, and investing in their growth.
-                                 We’ve built products in a variety of industries.
-                                 Everything from media to finance to toys to
-                                 healthcare. Sometimes we work with management
-                                 teams to help their businesses grow faster or
-                                 unlock value using technology. Other times we
-                                 start or buy businesses outright. Each time, we
-                                 look for opportunities to leverage technology
-                                 built at the portfolio-level to drive value
-                                 faster. We believe that a diverse team brings
-                                 extraordinary success and we have created a work
-                                 environment geared towards work/life balance and
-                                 happiness. Able is committed to inclusion and
-                                 diversity and is an equal opportunity employer.
-                                 All applicants will receive consideration
-                                 without regard to race, color, religion, gender,
-                                 gender identity, sexual orientation, national
-                                 origin, disability, or veteran status.
-                               </p>
-                             </div>
-                             <button
-                               class="btn btn-primary"
-                               id="modal-button-finaly"
-                             >
-                               Get this job
-                             </button>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="modal-footer">
-                     <button
-                       type="button"
-                       class="btn btn-secondary"
-                       data-bs-dismiss="modal"
-                     >
-                       Close
-                     </button>
-                     <button type="button" class="btn btn-primary">
-                       Understood
-                     </button>
-                   </div>
-                 </div>
-               </div>
-             </div>
-             
-            </div>
-           </div>
-          </div>
+            <p class="application-title fw-bold fs-2" id="mod-candidateDetails-job-title">Software Engineer</p>
+            <p class="application-title modal-date" id="mod-candidateDetails-job-date">Posted Today</p>
 
-          <!--Modal- Job-Candidates--->
-
-          <div class="modal-job-details none " id="modal-job-details">
-           <div class="application">
-            <p class="application-title">Your Applications</p>
-
-            <table class="table">
-              <thead>
+            <table class="table table-hover table-responsive-sm ">
+              <thead class="table-light">
                 <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Type</th>
-                  <th scope="col">Company</th>
-                  <th scope="col">City</th>
-                  <th scope="col">Data sent</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Professional Description</th>
+                 
                 </tr>
               </thead>
               <tbody>
                 <tr class="row-application-job">
-                  <button
+              
+                  <td>John Doe
+                    <button
                     type="button"
                     class="btn btn-primary application-button-table"
                     data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
+                    data-bs-target="#modal-applicationDetails"
                   >
-                    Launch static backdrop modal
+                    asdasdasdasdasdasdasddas
                   </button>
-                  <td>Software Engineer</td>
-                  <td>Full Time</td>
-                  <td>Able.co</td>
-                  <td>Lima</td>
-                  <td>Agust 10, 2020</td>
+                  </td>
+                  <td>jhon@gmail.com</td>
+                  <td>987456123</td>
+                  <td>Software Developer</td>
+             
                 </tr>
               </tbody>
             </table>
-            <!-- Modal -->
+
+            <a class="nav-link close-this-job"href="#jobs">Close this job</a>
+
+            <!-- Button trigger modal -->
+
+            <!-- Modal-Application Details -->
             <div
-              class="modal fade"
-              id="staticBackdrop"
+              class="modal fade "
+              id="modal-applicationDetails"
               data-bs-backdrop="static"
               data-bs-keyboard="false"
               tabindex="-1"
@@ -1228,7 +926,7 @@
                       <li class="nav-item" role="presentation"></li>
                       <li class="nav-item" role="presentation">
                         <button
-                          class="nav-links modal-app-button"
+                          class="nav-links active modal-app-button"
                           id="modal-app-button"
                           data-bs-toggle="pill"
                           data-bs-target="#modal-application"
@@ -1240,29 +938,15 @@
                           Application
                         </button>
                       </li>
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-links modal-app-button"
-                          id="modal-app-jobDetailsB"
-                          data-bs-toggle="pill"
-                          data-bs-target="#job-details"
-                          type="button"
-                          role="tab"
-                          aria-controls="job-details"
-                          aria-selected="false"
-                        >
-                          Job Details
-                        </button>
-                      </li>
                     </ul>
                     <button
                       type="button"
-                      class="btn-close"
+                      class="btn-close me-4"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="modal-body d-flex">
+                  <div class="modal-body d-flex container">
                     <!-- Sidebar-Controls -->
                     <div
                       class="nav flex-column nav-pills sidebar-buttons"
@@ -1270,202 +954,29 @@
                       role="tablist"
                       aria-orientation="vertical"
                     >
-                      <p class="modal-title-job">Software Engineer</p>
-                      <button
-                        class="nav-link sidebar-button-jobForYou"
-                        id="v-pills-home-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#moda-application"
-                        type="button"
-                        role="tab"
-                        aria-controls="modal-applicantion"
-                        aria-selected="true"
-                      >
-                        <img src="../assets/inbox.svg" alt="" />
-                        Edit Application
-                      </button>
-                      <button
-                        class="nav-link sidebar-button-application"
-                        id="v-pills-profile-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#v-pills-profile"
-                        type="button"
-                        role="tab"
-                        aria-controls="v-pills-profile"
-                        aria-selected="false"
-                      >
-                        <img src="../assets/solution.svg" alt="" />
-                        Whithdraw application
-                      </button>
+                      <p class="modal-applicationDetails-name mb-0" id="modal-applicationDetails-name">
+                        Jhon Doe
+                      </p>
+                      <p class="modal-title-job mb-0" id="modal-applicationDetails-title">
+                        Software Engineer
+                      </p>
                     </div>
-                    <div class="tab-content" id="pills-tabContent">
-                      <div
-                        class="tab-pane fade show active"
-                        id="modal-application"
-                        role="tabpanel"
-                        aria-labelledby="pills-home-tab"
-                      >
-                        <div class="modal-app-profesionalExperience">
-                          <p class="modal-app-professional-title">
-                            Profesional Experience
-                          </p>
 
-                          <p
-                            class="modal-app-professional-content"
-                            id="modal-app-professional-content"
-                          >
-                            This is the professional experience the candidate
-                            wrote on their application. It could be several
-                            lines long. :D
-                          </p>
+                    <div class="modal-applicationDetails-content w-50 m-lg-4">
+                      <p class="modal-content-title mb-4">
+                        Professional Experience
+                      </p>
+                      <p class="modal-applicationDetails-experienceContent mb-0" id="modal-applicationDetails-experienceContent">
+                        This is the professional experience the candidate wrote
+                        on their application. It could be several lines long. :D
+                      </p>
 
-                          <p class="modal-app-professional-title">
-                            Why are you interested in working at Able.co?
-                          </p>
-                          <p
-                            class="modal-app-professional-content"
-                            id="modal-app-proIntersted"
-                          >
-                            This is the awnser the applicant wrote.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="tab-pane fade"
-                        id="job-details"
-                        role="tabpanel"
-                        aria-labelledby="job-details"
-                      >
-                        .l.
-
-                        <div class="job-details-modal d-flex">
-                          <div class="modal-grup1">
-                            <p class="modal-description">
-                              Able is seeking a Full-Stack Software Engineer.
-                              You will work on a variety of challenging,
-                              creative and innovative products that are part of
-                              our rapidly growing portfolio. Your experience
-                              will serve as a foundation for your growth at our
-                              company and we expect that you will keep
-                              developing your existing skills by growing your
-                              knowledge in areas you had never envisioned
-                              before.
-                            </p>
-
-                            <div class="modal-expected-of-you">
-                              <ul>
-                                <li>
-                                  Build server-side applications as well as
-                                  RESTful APIs with Ruby and Rails
-                                </li>
-                                <li>
-                                  Build client-side applications with React,
-                                  Redux, HTML5 and CSS3/SASS
-                                </li>
-                                <li>
-                                  Collaborate with a super talented team of
-                                  Engineers
-                                </li>
-                                <li>
-                                  Develop and exercise your understanding of UX
-                                  & UI design best practices
-                                </li>
-                                <li>
-                                  Use the test-driven development paradigm
-                                </li>
-                                <li>
-                                  Build server-side applications as well as
-                                  RESTful APIs with Ruby and
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="modal-looking-for">
-                              <ul>
-                                <li>
-                                  You have a passion for collaborative problem
-                                  solving and the willingness to challenge,
-                                  debate and form relationships with team
-                                  members
-                                </li>
-                                <li>
-                                  You know what you don’t know, you have no
-                                  problem admitting it, and you’re eager to do
-                                  whatever it takes to address that gap
-                                </li>
-                                <li>
-                                  You have a desire to improve Able’s product
-                                  development practices and the experience to
-                                  follow-through on implementation
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="modal-Job-requirements">
-                              <ul>
-                                <li>
-                                  2+ years professional experience as a software
-                                  engineer or equivalent
-                                </li>
-                                <li>
-                                  Thorough and up-to-date knowledge of
-                                  JavaScript and/or Ruby/Rails
-                                </li>
-                                <li>
-                                  Understanding of MVC architectures and
-                                  databases such as PostgreSQL and Redis
-                                </li>
-                                <li>
-                                  Sufficient HTML and CSS skills to be able to
-                                  work with designers to transform prototypes
-                                </li>
-                                <li>
-                                  Experience building modern, responsive and
-                                  interactive web applications using frameworks
-                                  such as React
-                                </li>
-                                <li>
-                                  Professional proficiency in written and spoken
-                                  English
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="modal-about-able">
-                              <p class="modal-about-text">
-                                Able builds technology products in a portfolio
-                                model. We believe that people, teams, and
-                                processes are more important than the ideas
-                                themselves, so we’ve focused on bringing great
-                                people together, and investing in their growth.
-                                We’ve built products in a variety of industries.
-                                Everything from media to finance to toys to
-                                healthcare. Sometimes we work with management
-                                teams to help their businesses grow faster or
-                                unlock value using technology. Other times we
-                                start or buy businesses outright. Each time, we
-                                look for opportunities to leverage technology
-                                built at the portfolio-level to drive value
-                                faster. We believe that a diverse team brings
-                                extraordinary success and we have created a work
-                                environment geared towards work/life balance and
-                                happiness. Able is committed to inclusion and
-                                diversity and is an equal opportunity employer.
-                                All applicants will receive consideration
-                                without regard to race, color, religion, gender,
-                                gender identity, sexual orientation, national
-                                origin, disability, or veteran status.
-                              </p>
-                            </div>
-                            <button
-                              class="btn btn-primary"
-                              id="modal-button-finaly"
-                            >
-                              Get this job
-                            </button>
-                          </div>
-                        </div>
-                      </div>
+                      <p class="modal-applicationDetails-content-title mb-0 mt-4">
+                        Why are you interested  in working at  Able.co?
+                      </p>
+                      <p class="modal-applicationDetails-Content" id="modal-applicationDetails-interestedContent">
+                        This is the awnser the  applicant wrote.
+                      </p>
                     </div>
                   </div>
                   <div class="modal-footer">
@@ -1483,10 +994,324 @@
                 </div>
               </div>
             </div>
-            
-           </div>
           </div>
+          <!-- Modal-  Job-Candidates en elemento de latabla sidebar -->
 
+          <!--Modal- Job-Candidates Externo--->
+
+          <div class="modal-job-details none" id="modal-job-details">
+            <div class="application">
+              <p class="application-title">Your Applications</p>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Data sent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="row-application-job">
+                    <button
+                      type="button"
+                      class="btn btn-primary application-button-table"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    >
+                      Launch static backdrop modal
+                    </button>
+                    <td>Software Engineer</td>
+                    <td>Full Time</td>
+                    <td>Able.co</td>
+                    <td>Lima</td>
+                    <td>Agust 10, 2020</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-application">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <ul
+                        class="nav nav-pills mb-3"
+                        id="pills-tab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-links modal-app-button"
+                            id="modal-app-button"
+                            data-bs-toggle="pill"
+                            data-bs-target="#modal-application"
+                            type="button"
+                            role="tab"
+                            aria-controls="modal-applicantion"
+                            aria-selected="false"
+                          >
+                            Application
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-links modal-app-button"
+                            id="modal-app-jobDetailsB"
+                            data-bs-toggle="pill"
+                            data-bs-target="#job-details"
+                            type="button"
+                            role="tab"
+                            aria-controls="job-details"
+                            aria-selected="false"
+                          >
+                            Job Details
+                          </button>
+                        </li>
+                      </ul>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body d-flex">
+                      <!-- Sidebar-Controls -->
+                      <div
+                        class="nav flex-column nav-pills sidebar-buttons"
+                        id="v-pills-tab"
+                        role="tablist"
+                        aria-orientation="vertical"
+                      >
+                        <p class="modal-title-job">Software Engineer</p>
+                        <button
+                          class="nav-link sidebar-button-jobForYou"
+                          id="v-pills-home-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#moda-application"
+                          type="button"
+                          role="tab"
+                          aria-controls="modal-applicantion"
+                          aria-selected="true"
+                        >
+                          <img src="../assets/inbox.svg" alt="" />
+                          Edit Application
+                        </button>
+                        <button
+                          class="nav-link sidebar-button-application"
+                          id="v-pills-profile-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#v-pills-profile"
+                          type="button"
+                          role="tab"
+                          aria-controls="v-pills-profile"
+                          aria-selected="false"
+                        >
+                          <img src="../assets/solution.svg" alt="" />
+                          Whithdraw application
+                        </button>
+                      </div>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div
+                          class="tab-pane fade show active"
+                          id="modal-application"
+                          role="tabpanel"
+                          aria-labelledby="pills-home-tab"
+                        >
+                          <div class="modal-app-profesionalExperience">
+                            <p class="modal-app-professional-title">
+                              Profesional Experience
+                            </p>
+
+                            <p
+                              class="modal-app-professional-content"
+                              id="modal-app-professional-content"
+                            >
+                              This is the professional experience the candidate
+                              wrote on their application. It could be several
+                              lines long. :D
+                            </p>
+
+                            <p class="modal-app-professional-title">
+                              Why are you interested in working at Able.co?
+                            </p>
+                            <p
+                              class="modal-app-professional-content"
+                              id="modal-app-proIntersted"
+                            >
+                              This is the awnser the applicant wrote.
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="job-details"
+                          role="tabpanel"
+                          aria-labelledby="job-details"
+                        >
+                          .l.
+
+                          <div class="job-details-modal d-flex">
+                            <div class="modal-grup1">
+                              <p class="modal-description">
+                                Able is seeking a Full-Stack Software Engineer.
+                                You will work on a variety of challenging,
+                                creative and innovative products that are part
+                                of our rapidly growing portfolio. Your
+                                experience will serve as a foundation for your
+                                growth at our company and we expect that you
+                                will keep developing your existing skills by
+                                growing your knowledge in areas you had never
+                                envisioned before.
+                              </p>
+
+                              <div class="modal-expected-of-you">
+                                <ul>
+                                  <li>
+                                    Build server-side applications as well as
+                                    RESTful APIs with Ruby and Rails
+                                  </li>
+                                  <li>
+                                    Build client-side applications with React,
+                                    Redux, HTML5 and CSS3/SASS
+                                  </li>
+                                  <li>
+                                    Collaborate with a super talented team of
+                                    Engineers
+                                  </li>
+                                  <li>
+                                    Develop and exercise your understanding of
+                                    UX & UI design best practices
+                                  </li>
+                                  <li>
+                                    Use the test-driven development paradigm
+                                  </li>
+                                  <li>
+                                    Build server-side applications as well as
+                                    RESTful APIs with Ruby and
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="modal-looking-for">
+                                <ul>
+                                  <li>
+                                    You have a passion for collaborative problem
+                                    solving and the willingness to challenge,
+                                    debate and form relationships with team
+                                    members
+                                  </li>
+                                  <li>
+                                    You know what you don’t know, you have no
+                                    problem admitting it, and you’re eager to do
+                                    whatever it takes to address that gap
+                                  </li>
+                                  <li>
+                                    You have a desire to improve Able’s product
+                                    development practices and the experience to
+                                    follow-through on implementation
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="modal-Job-requirements">
+                                <ul>
+                                  <li>
+                                    2+ years professional experience as a
+                                    software engineer or equivalent
+                                  </li>
+                                  <li>
+                                    Thorough and up-to-date knowledge of
+                                    JavaScript and/or Ruby/Rails
+                                  </li>
+                                  <li>
+                                    Understanding of MVC architectures and
+                                    databases such as PostgreSQL and Redis
+                                  </li>
+                                  <li>
+                                    Sufficient HTML and CSS skills to be able to
+                                    work with designers to transform prototypes
+                                  </li>
+                                  <li>
+                                    Experience building modern, responsive and
+                                    interactive web applications using
+                                    frameworks such as React
+                                  </li>
+                                  <li>
+                                    Professional proficiency in written and
+                                    spoken English
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="modal-about-able">
+                                <p class="modal-about-text">
+                                  Able builds technology products in a portfolio
+                                  model. We believe that people, teams, and
+                                  processes are more important than the ideas
+                                  themselves, so we’ve focused on bringing great
+                                  people together, and investing in their
+                                  growth. We’ve built products in a variety of
+                                  industries. Everything from media to finance
+                                  to toys to healthcare. Sometimes we work with
+                                  management teams to help their businesses grow
+                                  faster or unlock value using technology. Other
+                                  times we start or buy businesses outright.
+                                  Each time, we look for opportunities to
+                                  leverage technology built at the
+                                  portfolio-level to drive value faster. We
+                                  believe that a diverse team brings
+                                  extraordinary success and we have created a
+                                  work environment geared towards work/life
+                                  balance and happiness. Able is committed to
+                                  inclusion and diversity and is an equal
+                                  opportunity employer. All applicants will
+                                  receive consideration without regard to race,
+                                  color, religion, gender, gender identity,
+                                  sexual orientation, national origin,
+                                  disability, or veteran status.
+                                </p>
+                              </div>
+                              <button
+                                class="btn btn-primary"
+                                id="modal-button-finaly"
+                              >
+                                Get this job
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Understood
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Modal- Job-Candidates Externo--->
           <!--Modal-Job Detail--->
 
           <!-- Modal-Get-this-job -->
@@ -1544,7 +1369,7 @@
     </main>
 
     <!-- <script src="../js/main.js"></script> -->
-    <script src="../libs/bootstrap-5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+   
     <script src="../libs/bootstrap-5.0.1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

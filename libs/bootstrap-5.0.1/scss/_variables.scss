@@ -536,8 +536,8 @@ $table-cell-padding-x-sm:     .25rem !default;
 
 $table-cell-vertical-align:   top !default;
 
-$table-color:                 $body-color !default;
-$table-bg:                    transparent !default;
+$table-color:                 #595959 !default;
+$table-bg:                    #FFFFFF !default;
 
 $table-th-font-weight:        null !default;
 
@@ -551,15 +551,15 @@ $table-active-bg:             rgba($black, $table-active-bg-factor) !default;
 
 $table-hover-color:           $table-color !default;
 $table-hover-bg-factor:       .075 !default;
-$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-hover-bg:              #E6F7FF !default;
 
 $table-border-factor:         .1 !default;
 $table-border-width:          $border-width !default;
-$table-border-color:          $border-color !default;
+$table-border-color:          #FAFAFA !default;
 
 $table-striped-order:         odd !default;
 
-$table-group-separator-color: currentColor !default;
+$table-group-separator-color: #E8E8E8 !default;
 
 $table-caption-color:         $text-muted !default;
 
@@ -574,7 +574,7 @@ $table-variants: (
   "info":       shift-color($info, $table-bg-scale),
   "warning":    shift-color($warning, $table-bg-scale),
   "danger":     shift-color($danger, $table-bg-scale),
-  "light":      $light,
+  "light":      #FAFAFA,
   "dark":       $dark,
 ) !default;
 // scss-docs-end table-loop

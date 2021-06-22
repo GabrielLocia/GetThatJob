@@ -1,5 +1,4 @@
 $fon: 'Nunito', sans-serif;
-
 $fon3: 'Advent Pro', sans-serif;
 
 $Daybreak-Blue: #3c2dff;
@@ -13,7 +12,7 @@ $Gray-6: #bfbfbf;
 $Gray-8: #595959;
 $Gray-9: #262626;
 
-@import '../../libs/bootstrap-5.0.1/scss/bootstrap';
+@import '../libs/bootstrap-5.0.1/scss/bootstrap';
 
 /******Reset****/
 body {
@@ -40,50 +39,52 @@ h2 {
 }
 
 /*******site Style ***/
-.ml{
+.mle{
   margin-left: 209px;
-  
   margin-right: 15px;
-
   padding: 0;
 
 }
 
 /****Header****/
-@import 'Header';
+@import 'Landi/Header';
 /****Header****/
 
 /****Banner******/
-@import 'Banner';
+@import 'Landi/Banner';
 /****Banner******/
 
 /****After-Banner*/
-@import 'After-Banner';
+@import 'Landi/After-Banner';
 /****After-Banner*/
 
 /****Testimonial*/
-@import 'Testimonial';
+@import 'Landi/Testimonial';
 /****Testimonial*/
 
 /****Contacts****/
-@import 'Contacts';
+@import 'Landi/Contacts';
 /****Contacts****/
 
 
 /************JobList************/
 
 /****Header****/
-@import '../JobList/Header';
+@import 'JobList/Header';
 /****Header****/
 
 /****Sidebar****/
-@import '../JobList/sidebar';
+@import 'JobList/sidebar';
 
 /****Sidebar****/
 
 /****YourApplication****/
-@import '../JobList/YourApplication';
+@import 'JobList/YourApplication';
 /****YourApplication****/
 
+@import 'JobList/YourProfile';
+
 /****YourProfile****/
-@import '../JobList/YourProfile';
+
+/****Recreuiter****/
+@import 'Recreuiter/ModalApplicationDetails';

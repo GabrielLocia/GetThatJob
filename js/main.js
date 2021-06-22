@@ -10,6 +10,7 @@
 /******Job Buttons ****** */
 ((d) => {
   const $jobButton = d.getElementById('job-button-result'),
+    $windosJobForYou = d.getElementById("job-for-you"),
     $jobModal = d.getElementById("modal-job-details"),
     $buttonJobForYou = d.getElementById('jobsForYou-button'),
     $buttonYourApplication = d.getElementById('yourApplications-button'),
@@ -29,16 +30,25 @@
  
 
  // });
-  $jobButton.addEventListener("click",event=>$jobModal.classList.toggle("none"));
+  $jobButton.addEventListener("click",event=>{
+    $jobModal.classList.toggle("none");
+    $windosJobForYou.classList.add("none");
+  });
+
   $buttonYourApplication.addEventListener("click",event=>{
-      if(!$buttonJobForYou.classList.contains('none'))
+      
+      if(!$buttonJobForYou.classList.contains('none'))  
           $jobModal.classList.add("none");
   });
 
 
   $buttonModalReturn.addEventListener("click",event=>{
-    if(!$buttonJobForYou.classList.contains('none'))
-        $jobModal.classList.add("none");
+    $windosJobForYou.classList.toggle("none");
+    if(!$buttonJobForYou.classList.contains('none')){
+      $jobModal.classList.add("none");
+      
+    }
+        
 });
 
 $buttonYourProfile.addEventListener("click",event=>{
