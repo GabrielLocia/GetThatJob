@@ -22,7 +22,19 @@
     <!-- Bootstrap CSS -->
     <link href="../css/style.css" rel="stylesheet" />
 
-    <title>Sign Up Recruiter</title>
+    <style>
+      .tam{
+        width: 256px !important;
+        height: 311px !important;
+        
+      }
+
+      button{
+        margin: 25px 0 0 0 !important;
+      }
+    </style>
+
+    <title>Login</title>
   </head>
   <body>
     <!-- Heder -->
@@ -124,96 +136,45 @@
     </header>
     <!-- Heder -->
     <main>
-      <!--  Sidebar Professional-->
+  
     <div class="sing-up">
-
       <div id="signUp" class="sing-up">
-            <div id="form-singUp" class="form">
+            <div id="form-singUp" class="form tam">
               <div class="mb-3">
-                <p class="editProfile fw-bold">Sig Up</p>
-                <p class="role">As Recruiter</p>
-                <label for="form-sigUpRecreuiter-companyName" class="form-label"
-                  >Company Name</label
+                <p class="editProfile fw-bold">Login</p>
+                <p class="role" id="login-role">As Professional</p>
+                <label for="form-singUpProf-email" class="form-label"
+                  >Email</label
                 >
                 <input
                   type="text"
                   class="form-control"
-                  id="form-singUpRecreuiter-companyName"
-                  placeholder="My GreatCo"
+                  id="form-singUpProf-email"
+                  placeholder="youremail@email.com"
                 />
-                <p class="form-your-profile-suggestions">
-                  Your company already exists in Get on Board? Don't create a duplicate.
-                </p>
+
               </div>
 
               <div class="mb-3">
-                <label for="form-singUpRecreuiter-logo" class="form-label"
-                  >Logo Company</label
+                <label for="form-singUpProf-password" class="form-label"
+                  >Password</label
                 >
                 <input
-                  type="file"
+                  type="password"
                   class="form-control"
-                  id="form-singUpRecreuiter-logo"
-                  placeholder="name@example.com"
+                  id="form-singUpProf-password"
+                  placeholder="**************"
                 />
-                <p class="form-your-profile-suggestions">
-                  200x200px minimum
-                </p>
               </div>
 
               <div class="mb-3">
-                <label for="form-singUpRecreuiter-companyWebsite" class="form-label"
-                  >Company Website</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="form-singUpRecreuiter-companyWebsite"
-                  placeholder="https://"
-                />
-                <p class="form-your-profile-suggestions">
-                  Use your real first and last name
-                </p>
-              </div>
-
-              <div class="mb-3">
-                <label for="form-singUpRe-adiminEmail" class="form-label"
-                  >Administrator email</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="form-singUpRe-adiminEmail"
-                  placeholder="admin@mail.com"
-                />
-                <p class="form-your-profile-suggestions">
-                  Short an specific text about what you do
-                </p>
-              </div>
-
-              <div class="mb-3">
-                <label for="form-singUpRecreuiter-textArea" class="form-label"
-                  >Description</label
-                >
-                <textarea
-                  class="form-control"
-                  id="form-singUpRecreuiter-textArea"
-                  rows="3"
-                ></textarea>
-                <p class="form-your-profile-suggestions">
-                  Tells us about your work experience, what did you do before joining this top community?
-                </p>
-
-                <button class="btn btn-primary d-block form-button">Sing Up</button>
-                <a class="link-primary" href="">Sing In</a>
-
-              </div>
-
               
+                <button class="btn btn-primary d-block form-button">Sing Up</button>    
+              </div>
+            
             </div>
           </div>
   
-      <!-- Sidebar Professional -->
     </main>
 
     <script src="../js/main.js"></script>

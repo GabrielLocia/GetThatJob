@@ -155,7 +155,7 @@
 
         <!-- Sidebar-Conten -->
         <div class="tab-content w-100 sidbar-conten" id="v-pills-tabContent">
-          <!-- jobs-for-you -->
+          <!-- Jobs -->
           <div
             class="tab-pane fade show active border-primary jobs-for-you jobs"
             id="jobs"
@@ -418,7 +418,7 @@
               </button>
             </div>
           </div>
-          <!--end of Jobs for you-->
+          <!--end of Jobs-->
 
           <!-- Candidates -->
           <div
@@ -429,7 +429,7 @@
           >
             <p class="application-title marg-b fw-bold fs-2">Candidates</p>
 
-            <table class="table table-hover table-responsive-sm ">
+            <table class="table table-hover table-responsive-sm " id="candidates-table">
               <thead class="table-light">
                 <tr>
                   <th scope="col">Name</th>
@@ -442,10 +442,10 @@
               <tbody>
                 <tr class="row-application-job">
               
-                  <td>John Doe
+                  <td class="selectable">John Doe
                     <button
                     type="button"
-                    class="btn btn-primary application-button-table flot"
+                    class="btn btn-primary application-button-table"
                     data-bs-toggle="modal"
                     data-bs-target="#internal-modal-appDetails"
                   >
@@ -743,7 +743,7 @@
 
             </div> -->
           </div>
-          <!-- end of your application -->
+          <!-- end of Candidates -->
 
           <!-- Your Profile -->
           <div
@@ -883,7 +883,7 @@
               <tbody>
                 <tr class="row-application-job">
               
-                  <td>John Doe
+                  <td class="selectable">John Doe
                     <button
                     type="button"
                     class="btn btn-primary application-button-table"
