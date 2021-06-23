@@ -11498,6 +11498,15 @@ h2, .h2 {
   padding: 0;
 }
 
+main {
+  width: 1440px;
+  height: 1495px;
+}
+
+nav {
+  width: 1440px;
+}
+
 /****Header****/
 header div {
   padding-left: 0;
@@ -11857,9 +11866,14 @@ main {
   background-color: #f7fafc;
 }
 
-.sidebar-height .sidbar-conten .jobs-for-you .job-search-controls {
-  margin-top: 116px;
+.sidebar-height .sidbar-conten .jobs-for-you {
+  width: 1031px;
+  margin-top: 64px;
   margin-left: 104px;
+}
+
+.sidebar-height .sidbar-conten .jobs-for-you .job-search-controls {
+  margin-bottom: 28px;
   padding: 0;
 }
 
@@ -11925,10 +11939,8 @@ main {
 }
 
 .sidebar-height .sidbar-conten .jobs-for-you .job-button-result {
-  width: 1031px;
+  width: 100%;
   height: 854px;
-  margin-top: 28px;
-  margin-left: 104px;
 }
 
 .sidebar-height .sidbar-conten .jobs-for-you .job-button-result div .button-selection {
@@ -12078,6 +12090,7 @@ main {
   background-color: #f7fafc;
   margin-left: 88px;
   margin-top: 64px;
+  color: #000000;
 }
 
 .sidebar-height .sidbar-conten .modal-job-details .job-details-modal #modal-button-return {
@@ -12123,7 +12136,6 @@ main {
 .sidebar-height .sidbar-conten .modal-job-details .job-details-modal .modal-jobDetails-head {
   font-size: 24px;
   line-height: 24px;
-  color: #000000;
   width: 333px;
   height: 26px;
   margin-bottom: 24px;
@@ -12251,6 +12263,27 @@ main {
 .application {
   position: relative;
   height: 1355px;
+  width: 1000px;
+  margin-top: 64px;
+  margin-left: 100px;
+}
+
+.application .application-title {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  margin-bottom: 40px;
+  width: 16.563rem;
+  height: 3rem;
+}
+
+.application .table .application-table-colorhead {
+  --bs-table-accent-bg: #fafafa;
+}
+
+.application .row-application-job {
+  width: 200px !important;
+  height: 54px  !important;
+  padding: 0 !important;
 }
 
 .application .application-button-table {
@@ -12313,22 +12346,27 @@ main {
   border-bottom: 1px solid #3c2dff;
 }
 
+.table > :not(caption) > * > * {
+  padding: 1rem 1rem;
+}
+
 /****YourApplication****/
-#yourProfile #form-your-profile {
+/****YourProfile****/
+.sing-up .form {
   width: 400px;
   height: 925px;
   margin: 64px 420px 0 420px;
 }
 
-#yourProfile #form-your-profile label {
+.sing-up .form label {
   color: #262626;
 }
 
-#yourProfile #form-your-profile .editProfile {
+.sing-up .form .editProfile {
   font-size: 2rem;
 }
 
-#yourProfile #form-your-profile .form-your-profile-suggestions {
+.sing-up .form .form-your-profile-suggestions {
   font-style: normal;
   font-weight: normal;
   font-size: 0.875rem;
@@ -12336,20 +12374,19 @@ main {
   color: #8C8C8C;
 }
 
-#yourProfile #form-your-profile .deleteaccout {
+.sing-up .form .deleteaccout {
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: #F5222D;
   margin-top: 0.75rem;
 }
 
-#yourProfile #form-your-profile #form-your-profile-button {
+.sing-up .form #form-your-profile-button {
   width: 135px;
   height: 40px;
   border-radius: 0 !important;
 }
 
-/****YourProfile****/
 /****Recreuiter****/
 .modal-content-title {
   margin-top: 40px;
@@ -12364,6 +12401,11 @@ main {
   margin-left: 93px;
   position: relative;
   height: 1355px;
+}
+
+.modal-candidates-details #mod-candidateDetails-job-title {
+  width: 280px;
+  margin-bottom: 3px;
 }
 
 .modal-candidates-details .application-button-table {
@@ -12420,5 +12462,32 @@ main {
   font-size: 12px;
   line-height: 20px;
   padding: 0;
+}
+
+/****Sing-Up-Recreuiter****/
+#form-singUpRecreuiter {
+  margin-top: 132px;
+  margin-left: 544px;
+}
+
+#form-singUpRecreuiter .editProfile {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#form-singUpRecreuiter .role {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#form-singUpRecreuiter a {
+  margin-left: 178px;
+  width: 45px;
+}
+
+.form-button {
+  width: 256px;
+  height: 40px;
+  margin: 25px 72px;
 }
 /*# sourceMappingURL=style.css.map */

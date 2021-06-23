@@ -35,7 +35,7 @@
           nav-height
         "
       >
-        <div class="container-fluid">
+        <div class="container-fluid mle">
           <a class="navbar-brand" href="#">
             <img src="../assets/Logo.svg" alt="" />
           </a>
@@ -158,9 +158,10 @@
             role="tabpanel"
             aria-labelledby="jobs-for-you"
           >
-            <div class="container job-search-controls">
+            <div class="job-search-controls">
               <!--job Controls-->
               <p class="job-title">Jobs For you</p>
+              <!-- job for you grup1 -->
               <div class="d-flex job-dropdown">
                 <input
                   id="search"
@@ -278,6 +279,7 @@
                 </div>
               </div>
             </div>
+             <!-- job for you grup1 -->
             <!--fin JOB Controls-->
 
             <!-- Buttons-Jobs -->
@@ -348,11 +350,11 @@
             role="tabpanel"
             aria-labelledby="v-pills-profile-tab"
           >
-            <p class="application-title">Your Applications</p>
+            <p class="application-title fw-bold ">Your Applications</p>
 
-            <table class="table">
-              <thead>
-                <tr>
+            <table class="table table-hover table-responsive-sm">
+              <thead >
+                <tr class="application-table-colorhead row-application-job">
                   <th scope="col">Title</th>
                   <th scope="col">Type</th>
                   <th scope="col">Company</th>
@@ -362,7 +364,9 @@
               </thead>
               <tbody>
                 <tr class="row-application-job">
-                  <button
+                
+                  <td>Software Engineer
+                    <button
                     type="button"
                     class="btn btn-primary application-button-table"
                     data-bs-toggle="modal"
@@ -370,7 +374,7 @@
                   >
                     Launch static backdrop modal
                   </button>
-                  <td>Software Engineer</td>
+                  </td>
                   <td>Full Time</td>
                   <td>Able.co</td>
                   <td>Lima</td>
@@ -378,6 +382,9 @@
                 </tr>
               </tbody>
             </table>
+
+
+            
 
             <!-- Button trigger modal -->
 
@@ -666,12 +673,12 @@
 
           <!-- Your Profile -->
           <div
-            class="tab-pane fade"
+            class="tab-pane fade sing-up"
             id="yourProfile"
             role="tabpanel"
             aria-labelledby="v-pills-messages-tab"
           >
-            <div id="form-your-profile">
+            <div id="form-your-profile" class="form ">
               <div class="mb-3">
                 <p class="editProfile fw-bold">Edit your profile</p>
                 <label for="form-your-profile-name" class="form-label"
@@ -774,7 +781,12 @@
                 <p class="form-your-profile-suggestions">
                   Use your real first and last name
                 </p>
-                <button id="form-your-profile-button  " class="btn  btn-outline-primary">Save Change</button>
+                <button
+                  id="form-your-profile-button  "
+                  class="btn btn-outline-primary"
+                >
+                  Save Change
+                </button>
                 <p class="deleteaccout">Delete permanently your account</p>
               </div>
             </div>
@@ -914,19 +926,19 @@
                   Able builds technology products in a portfolio model. We
                   believe that people, teams, and processes are more important
                   than the ideas themselves, so we’ve focused on bringing great
-                  people together, and investing in their growth. <br />
+                  people together, and investing in their growth. <br /><br />
                   We’ve built products in a variety of industries. Everything
                   from media to finance to toys to healthcare. Sometimes we work
                   with management teams to help their businesses grow faster or
-                  unlock value using technology. <br />
+                  unlock value using technology. <br /><br />
                   Other times we start or buy businesses outright. Each time, we
                   look for opportunities to leverage technology built at the
-                  portfolio-level to drive value faster. <br />
+                  portfolio-level to drive value faster. <br /><br />
                   We believe that a diverse team brings extraordinary success
                   and we have created a work environment geared towards
                   work/life balance and happiness. Able is committed to
                   inclusion and diversity and is an equal opportunity employer.
-                  <br />
+                  <br /><br />
                   All applicants will receive consideration without regard to
                   race, color, religion, gender, gender identity, sexual
                   orientation, national origin, disability, or veteran status.
@@ -938,17 +950,17 @@
               </div>
               <div class="modal-grup2">
                 <div class="grup21">
-                  <div style="width: 50px; height: 50px;">
+                  <div style="width: 50px; height: 50px">
                     <img
-                    class="moda-logo-compani w-100"
-                    src="../assets/Able50.png"
-                    alt=""
-                  />
+                      class="moda-logo-compani w-100"
+                      src="../assets/Able50.png"
+                      alt=""
+                    />
                   </div>
-                 
+
                   <p class="modal-company-name fw-bold">Able.co</p>
                   <span class="d-flex">
-                    <img src="../assets/mdi_location_on.svg" alt="">
+                    <img src="../assets/mdi_location_on.svg" alt="" />
                     <p>Lima, Peru</p>
                   </span>
 
@@ -956,22 +968,21 @@
                     <img src="../assets/mdi_open_in_new.svg" alt="" />
                     Open Website</a
                   >
-                  <p class="modal-posted-job ">Posted 10 Jobs</p>
+                  <p class="modal-posted-job">Posted 10 Jobs</p>
 
-                  <button class="btn btn-primary fw-bold gu21 rounded-0" id="modal-button-finaly">
+                  <button
+                    class="btn btn-primary fw-bold gu21 rounded-0"
+                    id="modal-button-finaly"
+                  >
                     Get this job
                   </button>
                   <div class="line">
                     <button id="modal-button-return">
                       View All Jobs
                       <img src="../assets/arrow-left.svg" alt="" />
-                      
                     </button>
                   </div>
                 </div>
-
-              
-                
               </div>
             </div>
           </div>

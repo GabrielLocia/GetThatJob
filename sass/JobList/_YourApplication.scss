@@ -2,6 +2,28 @@ $backgroug: #f7fafc;
 .application {
   position: relative;
   height: 1355px;
+  width: 1000px;
+  margin-top: 64px;
+  margin-left: 100px;
+  .application-title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    margin-bottom: 40px;
+    width: 16.563rem;
+    height: 3rem;
+  }
+  .table .application-table-colorhead {
+    --bs-table-accent-bg: #fafafa;
+
+  }
+
+  .row-application-job{
+   
+    width: 200px !important;
+    height: 54px  !important;
+    padding: 0 !important;
+  
+  }
 
   .application-button-table {
     position: absolute;
@@ -33,7 +55,7 @@ $backgroug: #f7fafc;
         font-size: 14px;
         line-height: 22px;
         .modal-app-button {
-            margin-top: 20px;
+          margin-top: 20px;
           width: 120px;
           height: 35px;
           padding: 0;
@@ -48,16 +70,20 @@ $backgroug: #f7fafc;
   }
 }
 
-.nav-links{
-    background: none;
-    border: 0;
-    border-radius: 0.25rem;
+.nav-links {
+  background: none;
+  border: 0;
+  border-radius: 0.25rem;
 }
 
-.nav-pills .nav-links.active{
-    
-    background-color:white !important;
-    border: 0;
-    border-radius: 0.25rem;
-    border-bottom: 1px solid #3c2dff;
+.nav-pills .nav-links.active {
+  background-color: white !important;
+  border: 0;
+  border-radius: 0.25rem;
+  border-bottom: 1px solid #3c2dff;
+}
+
+
+.table > :not(caption) > * > * {
+  padding: 1rem 1rem;
 }

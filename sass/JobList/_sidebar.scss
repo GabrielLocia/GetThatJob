@@ -72,11 +72,15 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
+   
     background-color: $backgroug;
     .jobs-for-you {
+
+      width: 1031px;
+      margin-top: 64px;
+      margin-left: 104px;
       .job-search-controls {
-        margin-top: 116px;
-        margin-left: 104px;
+        margin-bottom: 28px;
         padding: 0;
         div,
         input {
@@ -85,6 +89,7 @@ main {
         .job-search {
           width: 283px;
           height: 40px;
+
         }
 
         .job-title {
@@ -118,11 +123,10 @@ main {
       }
 
       .job-button-result {
-        width: 1031px;
+        width: 100%;
         height: 854px;
 
-        margin-top: 28px;
-        margin-left: 104px;
+    
 
         div {
           .button-selection {
@@ -270,6 +274,7 @@ main {
         background-color: $backgroug;
         margin-left: 88px;
         margin-top: 64px;
+        color: #000000;
         #modal-button-return {
           border: 0;
           padding: 0;
@@ -309,7 +314,7 @@ main {
         .modal-jobDetails-head {
           font-size: 24px;
           line-height: 24px;
-          color: #000000;
+          
           width: 333px;
           height: 26px;
           margin-bottom: 24px;

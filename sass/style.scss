@@ -46,6 +46,15 @@ h2 {
 
 }
 
+main{
+  width: 1440px;
+  height: 1495px;
+}
+
+nav{
+  width: 1440px;
+}
+
 /****Header****/
 @import 'Landi/Header';
 /****Header****/
@@ -82,9 +91,13 @@ h2 {
 @import 'JobList/YourApplication';
 /****YourApplication****/
 
-@import 'JobList/YourProfile';
 
 /****YourProfile****/
+@import 'JobList/YourProfile';
 
 /****Recreuiter****/
 @import 'Recreuiter/ModalApplicationDetails';
+
+
+/****Sing-Up-Recreuiter****/
+@import 'SingUpRecreuiter/SingUpRecreuiter';
