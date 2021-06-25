@@ -11911,8 +11911,8 @@ main {
 }
 
 .sidebar-height .sidbar-conten .jobs-for-you .job-search-controls .job-title {
-  width: 184px;
-  height: 44px;
+  width: auto;
+  height: auto;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -11980,13 +11980,17 @@ main {
   margin-bottom: 20px;
 }
 
-.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-compani .logo-compani {
+.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-company {
+  position: absolute;
+}
+
+.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-company .logo-company {
   height: 36px;
   margin: 25px 15px 21px 20px;
 }
 
-.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-compani .job-title {
-  width: 190px;
+.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-company .job-title {
+  width: auto;
   height: 27px;
   color: #4a5568;
   font-style: normal;
@@ -11997,7 +12001,7 @@ main {
   margin-bottom: 4px;
 }
 
-.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-compani span p {
+.sidebar-height .sidbar-conten .jobs-for-you .job-button-result div ul .button-selection .job-company span p {
   margin: 0;
   margin-right: 9px;
   font-style: normal;
@@ -12018,7 +12022,7 @@ main {
   color: #ffffff;
   margin-top: 29px;
   margin-bottom: 29px;
-  margin-left: 529px;
+  margin-left: 805px;
   margin-right: 20px;
 }
 
@@ -12543,6 +12547,7 @@ main {
 }
 
 .number-applications {
+  position: absolute;
   margin-bottom: 0;
   font-style: normal;
   font-weight: 600;
@@ -12550,8 +12555,12 @@ main {
   line-height: 32px;
   color: #000000;
   width: 140px;
-  margin-right: 200px;
-  margin-left: 250px;
+  margin-right: 250px;
+  margin-left: 491px;
+}
+
+.job-grup2 {
+  left: 879px;
 }
 
 .job {

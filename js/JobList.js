@@ -5,7 +5,7 @@
     $jobsForYou = d.getElementById('job-for-you');
 
   $linkEdit.addEventListener('mousedown', (event) => {
-    console.log(event);
+    
     $yourProfile.classList.add('active', 'show');
 
     $jobsForYou.classList.remove('show');
@@ -24,17 +24,6 @@
     $buttonYourProfile = d.getElementById('yourProfile-button'),
     $buttonModalReturn = d.getElementById('modal-button-return');
 
-  //   $jobButton.addEventListener('mousedown', function (event) {
-  //     $aux.innerHTML = document.getElementById('job-for-you');
-
-  //     fetch('Modal-Job-Details.html')
-  //       .then((response) => response.text())
-  //       .then((data) => {
-  //         console.log("data: " );
-  //         document.getElementById('job-for-you').innerHTML = data;
-  //       });
-
-  // });
   $jobButton.addEventListener('click', (event) => {
     $jobModal.classList.toggle('none');
     $windosJobForYou.classList.add('none');
@@ -62,16 +51,14 @@
 /*****Busqueda ************/
 ((d) => {
   const $inputSearch = d.getElementById('jobSearch'),
-    $container = d.getElementsByClassName('button-selection'),
-    $element = d.getElementsByClassName('job-title');
-  console.log($element);
-
+    $container = d.getElementsByClassName('button-selection');
+ 
   $inputSearch.addEventListener('keyup', (event) => {
-    console.log(event.target.value);
+
     Array.prototype.forEach.call($container, (p, i) => {
-      console.log($container[i]);
+      
       aux = p.getAttribute('data-search');
-      console.log(aux);
+     
       aux.toLocaleLowerCase().includes(event.target.value)
         ? p.classList.remove('filter')
         : p.classList.add('filter');
@@ -91,9 +78,12 @@ let random = function (min, max) {
 /*****Agregar elementos a al lista jobs for you************/
 
 ((d) => {
- 
+  const $listJobResult = d.getElementById('jobListResult')
 
-  fetch('../Jobs.json')
+
+
+ //consulta a al banckend en esta caso consulta a un archivo de pruebas
+  fetch('../Jobs.json') 
     .then((resp) => resp.json())
     .then((jobs) => {
       console.log(jobs);
@@ -102,27 +92,27 @@ let random = function (min, max) {
 
         let ran = random(1, 50);
         let id = 'jobButton' + ran;
+        
+        const $button = document.createElement('button'),
+        $divJobCompany = document.createElement('div'),
+        $imgLogoCompany = document.createElement('img'),
+        $spansearchTitle = document.createElement('span'),
+        $pJobTitle = document.createElement('p'),
+        $spanCompanyAndCity = document.createElement('span'),
+        $pCompanyAndCity = document.createElement('p'),
+        $imgjobNationFlag = document.createElement('img'),
+        $divJobGrup2 = document.createElement('div'),
+        $divhov = document.createElement('div'),
+        $imgVector$ = document.createElement('img'),
+        $divpay = document.createElement('div'),
+        $psalaryRange = document.createElement('p'),
+        $divarow = document.createElement('div'),
+        $pJobTime = document.createElement('p'),
+        $pJobSeniority = document.createElement('p'),
+        $pData = document.createElement('p');
 
-
-        const $listJobResult = d.getElementById('jobListResult'),
-        $button = d.createElement('button'),
-        $divJobCompani = d.createElement('div'),
-        $imgLogoCompani = d.createElement('img'),
-        $spansearchTitle = d.createElement('span'),
-        $pJobTitle = d.createElement('p'),
-        $spanCompanyAndCity = d.createElement('span'),
-        $pCompanyAndCity = d.createElement('p'),
-        $imgjobNationFlag = d.createElement('img'),
-        $divJobGrup2 = d.createElement('div'),
-        $divhov = d.createElement('div'),
-        $imgVector$ = d.createElement('img'),
-        $divpay = d.createElement('div'),
-        $psalaryRange = d.createElement('p'),
-        $divarow = d.createElement('div'),
-        $pJobTime = d.createElement('p'),
-        $pJobSeniority = d.createElement('p'),
-        $pData = d.createElement('p');
-
+        //Cargar Empleos a la lista ul 
+       
         $button.setAttribute('id', id);
         $button.setAttribute('type', 'button');
         $button.setAttribute(
@@ -133,14 +123,14 @@ let random = function (min, max) {
         $button.setAttribute('aria-current', id);
         $button.setAttribute('data-search', jobs.title);
 
-        $divJobCompani.setAttribute('class', 'job-compani d-flex');
-        $imgLogoCompani.setAttribute('class', 'log-compani');
+        $divJobCompany.setAttribute('class', 'job-company d-flex');
+        $imgLogoCompany.setAttribute('class', 'log-company');
 
-        $imgLogoCompani.setAttribute('class', 'logo-compani');
-        id = 'joblogoCompani' + random(1, 100);
-        $imgLogoCompani.setAttribute('id', id);
-        $imgLogoCompani.setAttribute('src', '../assets/Able.png');
-        $imgLogoCompani.setAttribute('alt', 'logoCompani');
+        $imgLogoCompany.setAttribute('class', 'logo-company');
+        id = 'joblogoCompany' + random(1, 100);
+        $imgLogoCompany.setAttribute('id', id);
+        $imgLogoCompany.setAttribute('src', '../assets/Able.png');
+        $imgLogoCompany.setAttribute('alt', 'logoCompany');
 
         $spansearchTitle.setAttribute('id', 'searchTitle');
         $spansearchTitle.setAttribute(
@@ -149,13 +139,13 @@ let random = function (min, max) {
         );
 
         $pJobTitle.setAttribute('class', 'job-title');
-        $pJobTitle.setAttribute('id', 'job-title');
+        $pJobTitle.setAttribute('id', 'job-title w-auto');
         $pJobTitle.innerText = jobs.title;
         $spanCompanyAndCity.setAttribute('class', 'd-flex');
         $pCompanyAndCity.setAttribute('id', 'companyAndCity');
         $pCompanyAndCity.innerText = jobs.company + '-' + jobs.location;
 
-        $imgjobNationFlag.setAttribute('i', 'log-compani');
+        $imgjobNationFlag.setAttribute('i', 'log-company');
         id = 'jobNationFlag' + random(1, 100);
         $imgjobNationFlag.setAttribute('id', id);
         $imgjobNationFlag.setAttribute('src', '../assets/image 2.png');
@@ -184,9 +174,9 @@ let random = function (min, max) {
 
         /******Extructura html**** */
 
-        $button.appendChild($divJobCompani);
-        $divJobCompani.appendChild($imgLogoCompani);
-        $divJobCompani.appendChild($spansearchTitle);
+        $button.appendChild($divJobCompany);
+        $divJobCompany.appendChild($imgLogoCompany);
+        $divJobCompany.appendChild($spansearchTitle);
         $spansearchTitle.appendChild($pJobTitle);
         $spansearchTitle.appendChild($spanCompanyAndCity);
         $spanCompanyAndCity.appendChild($pCompanyAndCity);
@@ -201,6 +191,7 @@ let random = function (min, max) {
         $divJobGrup2.appendChild($pJobTime);
         $divJobGrup2.appendChild($pJobSeniority);
         $divJobGrup2.appendChild($pData);
+
         $listJobResult.appendChild($button);
         /******Extructura html**** */
       }

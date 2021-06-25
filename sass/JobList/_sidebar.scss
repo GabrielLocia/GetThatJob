@@ -92,8 +92,8 @@ main {
         }
 
         .job-title {
-          width: 184px;
-          height: 44px;
+          width:auto;
+          height: auto;
           font-style: normal;
           font-weight: bold;
           font-size: 32px;
@@ -138,13 +138,14 @@ main {
               box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06),
                 0px 1px 3px rgba(0, 0, 0, 0.1);
               margin-bottom: 20px;
-              .job-compani {
-                .logo-compani {
+              .job-company {
+                position: absolute;
+                .logo-company {
                   height: 36px;
                   margin: 25px 15px 21px 20px;
                 }
                 .job-title {
-                  width: 190px;
+                  width: auto;
                   height: 27px;
                   color: #4a5568;
   
@@ -179,7 +180,7 @@ main {
                 color: #ffffff;
                 margin-top: 29px;
                 margin-bottom: 29px;
-                margin-left: 529px;
+                margin-left: 805px;
                 margin-right: 20px;
   
                 & > * {
