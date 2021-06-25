@@ -6,12 +6,10 @@
     $loginRole = d.getElementById('login-role');
 
   $flagRecreuiter.addEventListener('click', (event) => {
-    console.log(event);
     $loginRole.innerText = 'As Recreuiter';
   });
 
   $flagProfessional.addEventListener('mousedown', (event) => {
-    console.log(event);
     $loginRole.innerText = 'As Professional';
   });
 })(document);
@@ -22,31 +20,36 @@
   const $flagRecreuiter = d.getElementById('login-role');
   let remplaza = '/+/gi',
     url = window.location.href,
-    variable_may,
-    variable_pos;
+    var_pos;
 
   url = unescape(url);
   url = url.replace(remplaza, ' ');
   url = url.toUpperCase();
 
-  variable_pos = url.indexOf('TYPE');
+  var_pos = url.indexOf('TYPE');
 
   console.log(url);
 
-  if (variable_pos != -1) {
-    let pos_separador = url.indexOf('&', variable_pos);
+  if (var_pos != -1) {
+    let pos_separator = url.indexOf('&', var_pos);
 
-    if (pos_separador != -1) {
-      console.log('esto', url.substring(variable_pos + 1, pos_separador));
+    if (pos_separator != -1) {
+      console.log('esto', url.substring(var_pos + 1, pos_separator));
     } else {
-      console.log('esto otro', url.substring(variable_pos, url.length));
-      if (url.substring(variable_pos, url.length) == 'TYPE=RECREUITER')
+      console.log('esto otro', url.substring(var_pos, url.length));
+      if (url.substring(var_pos, url.length) == 'TYPE=RECREUITER')
         $flagRecreuiter.innerText = 'As Recreuiter';
     }
   } else {
     return 'NO_ENCONTRADO';
   }
 })(document);
+
+function GetUser(){
+   
+
+  
+}
 
 /**validando inicio de sesion ****/
 ((d) => {
@@ -91,6 +94,3 @@
       });
   });
 })(document);
-
-
-

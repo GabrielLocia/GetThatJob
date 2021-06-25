@@ -57,6 +57,7 @@
 
     Array.prototype.forEach.call($container, (p, i) => {
       
+      //obteniendo nombre del trabajo 
       aux = p.getAttribute('data-search');
      
       aux.toLocaleLowerCase().includes(event.target.value)
