@@ -36,7 +36,7 @@
         "
       >
         <div class="container-fluid mle">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/index.html">
             <img src="../assets/Logo.svg" alt="" />
           </a>
           <div class="header-me">
@@ -55,14 +55,20 @@
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                   <a
-                    class="nav-link text link-header link-black"
-                    href="#"
+                    class="
+                      nav-link
+                      text
+                      link-header link-black
+                      d-flex
+                      align-items-center
+                    "
+                    href=""
                     id="navbarDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    myname
+                    <p class="mb-0" id="myName">myname</p>
                     <svg
                       width="12"
                       height="12"
@@ -81,10 +87,16 @@
                     aria-labelledby="navbarDropdown"
                   >
                     <li>
-                      <a class="dropdown-item" href="#">Edit your profile</a>
+                      <a
+                        class="dropdown-item"
+                        href="#yourProfile"
+                        id="linkYourProfile"
+                      >
+                        Edit your profile</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item loginOut-text" href="#"
+                      <a class="dropdown-item loginOut-text" href="/index.html"
                         >Log out</a
                       >
                     </li>
@@ -164,118 +176,46 @@
               <!-- job for you grup1 -->
               <div class="d-flex job-dropdown">
                 <input
-                  id="search"
+                  id="jobSearch"
                   class="form-control me-2 job-search"
                   type="search"
                   placeholder="        Find that job!"
                   aria-label="Search"
+                  data-search="search"
                 />
-                <div class="dropdown job-nav-contry">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+
+                <div class="job-nav-contry" data-search="search">
+                  <select
+                    class="form-select job-nav-contry"
+                    aria-label=".form-select-lg example"
                   >
-                    Country
-                  </button>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton1"
-                  >
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
+                    <option selected>Coutry</option>
+                    <option value="peru">Peru</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Arequipa">Arequipa</option>
+                  </select>
                 </div>
-                <div class="dropdown job-nav-type">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenu2"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+
+                <div class="job-nav-range">
+                  <select
+                    class="form-select job-nav-range"
+                    aria-label=".form-select-lg example"
                   >
-                    Type
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Action
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Another action
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Something else here
-                      </button>
-                    </li>
-                  </ul>
+                    <option selected>Salary Range</option>
+                    <option value="1000-1500">$1000-$1500</option>
+                    <option value="2000-2200">$2000-$2200</option>
+                  </select>
                 </div>
-                <div class="dropdown job-nav-range">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenu3"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+
+                <div class="job-nava-grade">
+                  <select
+                    class="form-select job-nava-grade"
+                    aria-label=".form-select-lg example"
                   >
-                    Salary Range
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Action
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Another action
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Something else here
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="dropdown job-nava-grade">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenu4"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Senior
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Action
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Another action
-                      </button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item" type="button">
-                        Something else here
-                      </button>
-                    </li>
-                  </ul>
+                    <option selected>Senior</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -285,57 +225,183 @@
             <!-- Buttons-Jobs -->
             <div class="job-button-result">
               <div class="list-group" id="button-selection-job">
-                <button
-                  id="job-button-result"
-                  type="button"
-                  class="
-                    list-group-item list-group-item-action
-                    button-selection
-                    d-flex
-                  "
-                  aria-current="true"
-                >
-                  <div class="job-compani d-flex">
-                    <img src="../assets/Able.png" class="logo-compani" alt="" />
+                <ul class="p-0 " id="jobListResult">
 
-                    <span class="d-flex flex-column">
-                      <p class="job-title">Sofware Engineere</p>
-                      <span class="d-flex">
-                        <p>Able-Lima</p>
-                        <img src="../assets/image 2.png" alt="" />
+                  <button
+                    id="jobButtonResult"
+                    type="button"
+                    class="
+                      list-group-item list-group-item-action
+                      button-selection
+                      filter
+                    "
+                    aria-current="true"
+                    data-search="Software Engineere"
+                  >
+                    <div class="job-compani d-flex">
+                      <img
+                        src="../assets/Able.png"
+                        data-search="search"
+                        id="jobLogoCompani"
+                        class="logo-compani"
+                        alt=""
+                      />
+
+                      <span
+                        class="d-flex flex-column searchTitle"
+                        id="searchTitle"
+                      >
+                        <p
+                          id="jobTitle"
+                          data-search="search-title"
+                          class="job-title"
+                        >
+                          Software Engineere
+                        </p>
+                        <span class="d-flex">
+                          <p id="companyAndCity" data-search="search">
+                            Able-Lima
+                          </p>
+                          <img
+                            data-search="search"
+                            id="jobNationFlag"
+                            src="../assets/image 2.png"
+                            alt=""
+                          />
+                        </span>
                       </span>
-                    </span>
-                  </div>
-
-                  <div class="job-grup2 d-flex align-items-center">
-                    <div class="hov">
-                      <img src="../assets/Vector$.svg" alt="" />
-                      <div class="pay" id="pay">
-                        <p style="margin-bottom: 0">$1000</p>
-                        <div class="arow">
-                          <svg
-                            width="7"
-                            height="12"
-                            viewBox="0 0 7 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0.5 12L0.500002 0L6.5 6L0.5 12Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </div>
-                      </div>
                     </div>
 
-                    <p class="job-time c">Full time</p>
-                    <p class="job-grade c">Junior</p>
-                    <p class="date">Today</p>
-                  </div>
-                </button>
+                    <div class="job-grup2 d-flex align-items-center">
+                      <div class="hov">
+                        <img src="../assets/Vector$.svg" alt="$" />
+                        <div class="pay" id="pay">
+                          <p
+                            id="salaryRange"
+                            data-search="search"
+                            style="margin-bottom: 0"
+                          >
+                            $1000
+                          </p>
+                          <div class="arow">
+                            <img src="../assets/arrow.svg" alt="arow">
+                            <!-- <svg
+                              width="7"
+                              height="12"
+                              viewBox="0 0 7 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0.5 12L0.500002 0L6.5 6L0.5 12Z"
+                                fill="white"
+                              />
+                            </svg> -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <p id="jobType" data-search="search" class="job-time c">
+                        Full time
+                      </p>
+                      <p
+                        id="Seniority "
+                        data-search="search"
+                        class="job-grade c"
+                      >
+                        Junior
+                      </p>
+                      <p class="date">Today</p>
+
+                    </div>
+                  </button>
+                  <button
+                    id="jobButtonResult"
+                    type="button"
+                    class="
+                      list-group-item list-group-item-action
+                      button-selection
+                       filter
+                    "
+                    aria-current="true"
+                    data-search="Software Engineere"
+                  >
+                    <div class="job-compani d-flex">
+                      <img
+                        src="../assets/Able.png"
+                        data-search="search"
+                        id="jobLogoCompani"
+                        class="logo-compani"
+                        alt=""
+                      />
+
+                      <span class="d-flex flex-column" id="searchTitle">
+                        <p
+                          id="jobTitle"
+                          data-search="search-title"
+                          class="job-title"
+                        >
+                          Software Engineere
+                        </p>
+                        <span class="d-flex">
+                          <p id="companyAndCity" data-search="search">
+                            Able-Lima
+                          </p>
+                          <img
+                            data-search="search"
+                            id="jobNationFlag"
+                            src="../assets/image 2.png"
+                            alt=""
+                          />
+                        </span>
+                      </span>
+                    </div>
+
+                    <div class="job-grup2 d-flex align-items-center">
+                      <div class="hov">
+                        <img src="../assets/Vector$.svg" alt="" />
+                        <div class="pay" id="pay">
+                          <p
+                            id="salaryRange"
+                            data-search="search"
+                            style="margin-bottom: 0"
+                          >
+                            $1000
+                          </p>
+                          <div class="arow">
+                            <svg
+                              width="7"
+                              height="12"
+                              viewBox="0 0 7 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0.5 12L0.500002 0L6.5 6L0.5 12Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p id="jobType" data-search="search" class="job-time c">
+                        Full time
+                      </p>
+                      <p
+                        id="Seniority "
+                        data-search="search"
+                        class="job-grade c"
+                      >
+                        Junior
+                      </p>
+                      <p class="date">Today</p>
+                    </div>
+                  </button>
+ 
+                </ul>
               </div>
-              <button class="btn btn-primary job-button-load">LOAD MORE</button>
+              <button class="btn btn-primary job-button-load none">LOAD MORE</button>
             </div>
             <!-- Buttons-Jobs -->
 
@@ -495,7 +561,12 @@
                         role="tabpanel"
                         aria-labelledby="pills-home-tab"
                       >
-                        <div class="modal-app-professionalExperience modal-app-aline h-auto">
+                        <div
+                          class="
+                            modal-app-professionalExperience modal-app-aline
+                            h-auto
+                          "
+                        >
                           <p class="modal-app-professional-title fw-bold">
                             Profesional Experience
                           </p>
@@ -1000,49 +1071,74 @@
           <!--Modal-Job Detail--->
 
           <!-- Modal-Get-this-job -->
-          <div class="modal-get-this-job none" id="modal-get-this-job">
-            <p class="modal-getTJ-title" id="modal-getTJ-title">
-              Get this job: Software Engineer
+          <div class="modal-get-this-job sing-up none" id="modal-get-this-job">
+            <p
+              class="modal-getTJ-title editProfile"
+              id="modal-getTj-title"
+              style="font-size: 2rem; margin: 64px 0 20px 100px"
+            >
+              <span class="text-primary fw-bold"> Get this job:</span> Software
+              Engineer
             </p>
-            <div class="input-group mb-3">
-              <p class="modal-getTJ-title">Upload your CV</p>
-              <input
-                type="file"
-                class="border border-primary"
-                id="modal-getTJ-input-cv"
-                aria-describedby="inputGroupFileAddon03"
-                aria-label="Upload"
-              />
-              <label id="" for="inputGroupFile03"></label>
 
-              <p class="modal-getTJ-range">
-                PDF files only. 5MB max file size.
-              </p>
-            </div>
+            <div class="form" style="margin-left: 100px; margin-top: 0">
+              <div class="input-group mb-3 flex-column">
+                <p class="modal-getTJ-title mb-0">Upload your CV</p>
 
-            <div class="modal-experience">
-              <p class="modal-getTJ-title">Professional Experience</p>
-              <textarea
-                name="modal-getTJ-texarea"
-                id="modal-experience-texarea"
-                cols="30"
-                rows="10"
-              ></textarea>
-              <p class="modal-getTJ-range">Between 300 and 2000 characters.</p>
-            </div>
+                <div class="divFile">
+                  <div class="d-flex">
+                    <img src="../assets/icon container.svg" alt="" />
+                    <p class="textFile">Upluad</p>
+                  </div>
 
-            <div class="modal-getTJ-interested">
-              <p class="modal-getTJ-title">
-                Why are you interested in working at Able.co?
-              </p>
-              <textarea
-                name="modal-getTJ-texarea"
-                id="modal-getTJ-texarea"
-                cols="30"
-                rows="10"
-              ></textarea>
-              <p class="modal-getTJ-range">Between 50 and 1000 characters.</p>
-              <button class="modal-getTJ-button">Get this job!</button>
+                  <input
+                    type="file"
+                    class=""
+                    id="modal-getTJ-input-cv"
+                    aria-describedby="inputGroupFileAddon03"
+                    aria-label="Upload"
+                  />
+                </div>
+
+                <label id="" for="inputGroupFile03"></label>
+
+                <p class="form-your-profile-suggestions">
+                  PDF files only. 5MB max file size.
+                </p>
+              </div>
+
+              <div class="modal-experience">
+                <p class="modal-getTJ-title">Professional Experience</p>
+                <textarea
+                  name="modal-getTJ-texarea"
+                  id="modal-experience-texarea"
+                  cols="30"
+                  rows="10"
+                  class="form-control"
+                ></textarea>
+                <p class="form-your-profile-suggestions">
+                  Between 300 and 2000 characters.
+                </p>
+              </div>
+
+              <div class="modal-getTJ-interested">
+                <p class="modal-getTJ-title">
+                  Why are you interested in working at Able.co?
+                </p>
+                <textarea
+                  name="modal-getTJ-texarea"
+                  id="modal-getTJ-texarea"
+                  cols="30"
+                  rows="10"
+                  class="form-control"
+                ></textarea>
+                <p class="form-your-profile-suggestions">
+                  Between 50 and 1000 characters.
+                </p>
+                <button class="modal-getTJ-button btn btn-outline-primary">
+                  Get this job!
+                </button>
+              </div>
             </div>
           </div>
           <!-- End of Modal-Get-this-job -->
@@ -1053,7 +1149,7 @@
       <!-- Sidebar Professional -->
     </main>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/JobList.js"></script>
     <script src="../libs/bootstrap-5.0.1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

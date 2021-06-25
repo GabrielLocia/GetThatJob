@@ -44,7 +44,7 @@
           class="navbar navbar-expand-lg navbar-light bg-white border-bottom nav-height "
         >
           <div class="container ml">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               <img src="../assets/Logo.svg" alt="" />
             </a>
             <div class="header-me">
@@ -88,9 +88,9 @@
                       class="dropdown-menu link-menu-header"
                       aria-labelledby="navbarDropdown"
                     >
-                      <li><a class="dropdown-item" href="#">Recruiter</a></li>
+                      <li><a class="dropdown-item" id="flagRecreuiter" href="#">Recruiter</a></li>
                       <li>
-                        <a class="dropdown-item" href="#">Professional</a>
+                        <a class="dropdown-item" id="flagProfessional" href="#">Professional</a>
                       </li>
                     </ul>
                   </li>
@@ -121,9 +121,9 @@
                       class="dropdown-menu link-menu-header"
                       aria-labelledby="navbarDropdown"
                     >
-                      <li><a class="dropdown-item" href="#">Recruiter</a></li>
+                      <li><a class="dropdown-item"   href="Login.html">Recreuiter</a></li>
                       <li>
-                        <a class="dropdown-item" href="#">Professional</a>
+                        <a class="dropdown-item" href="Login.html">Professional</a>
                       </li>
                     </ul>
                   </li>
@@ -140,17 +140,24 @@
     <div class="sing-up">
       <div id="signUp" class="sing-up">
             <div id="form-singUp" class="form tam">
+              <form class="login-form" >
               <div class="mb-3">
                 <p class="editProfile fw-bold">Login</p>
                 <p class="role" id="login-role">As Professional</p>
+             
                 <label for="form-singUpProf-email" class="form-label"
                   >Email</label
                 >
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
-                  id="form-singUpProf-email"
+                  name="email"
+                  id="form-login-email"
                   placeholder="youremail@email.com"
+                  title="Email incorrecto"
+                  required
+                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                  
                 />
 
               </div>
@@ -162,22 +169,27 @@
                 <input
                   type="password"
                   class="form-control"
-                  id="form-singUpProf-password"
+                  id="form-login-password"
                   placeholder="**************"
+                  required
                 />
               </div>
-
-              <div class="mb-3">
-              
-                <button class="btn btn-primary d-block form-button">Sing Up</button>    
+              <div class="login-form-loader none">
+                <img src="../assets/rings.svg" alt="Cargando">
               </div>
-            
+          
+              <div class="mb-3">
+                <!-- <button class="btn btn-primary d-block form-button " type="submit"  require id="loginButton">Login</button> -->
+                <input type="submit" id="loginButton" class="btn btn-primary d-block form-button  p-0 m-0" required value="Login"/>    
+              </div>
+            </form>  
             </div>
           </div>
   
     </main>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/login.js" type="module"></script>
+ 
     <script src="../libs/bootstrap-5.0.1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

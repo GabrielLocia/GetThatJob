@@ -74,6 +74,12 @@ nav{
   margin-bottom: 40px
 }
 
+.filter{
+  display: none !important;
+}
+/****Login/****/
+
+
 
 /****Header****/
 @import 'Landi/Header';
@@ -115,9 +121,15 @@ nav{
 /****YourProfile****/
 @import 'JobList/YourProfile';
 
-/****Recreuiter****/
-@import 'Recreuiter/ModalApplicationDetails';
 
+/************JobList************/
+
+
+/************Recreuiter************/
+@import 'Recreuiter/ModalApplicationDetails';
+@import 'Recreuiter/ModalJobCanditates';
+@import 'Recreuiter/ModalPostNewJob';
 
 /****Sing-Up-Recreuiter****/
 @import 'SingUpRecreuiter/SingUpRecreuiter';
+

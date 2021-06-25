@@ -1,0 +1,39 @@
+[
+    {
+        "title": "DevOps Developer",
+        "type": "Full time",
+        "seniority": "Junior",
+        "salary": "$1800",
+        "location": "Peru",
+        "expected": "Build server-side applications as well as RESTful APIs with Ruby and Rails Collaborate with a super talented team of Engineers",
+        "looking": "You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members",
+        "requirements": "2+ years professional experience as a software engineer or equivalent",
+        "description"  :"Able builds technology products in a portfolio model.",
+        "company": "Able"
+    },
+    {
+        "title": "Data Scientist Developer",
+        "type": "Part Time",
+        "seniority": "Junior",
+        "salary": "$1800",
+        "location": "Peru",
+        "expected": "Build server-side applications as well as RESTful APIs with Ruby and Rails Collaborate with a super talented team of Engineers",
+        "looking": "You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members",
+        "requirements": "2+ years professional experience as a software engineer or equivalent",
+        "description"  :"Able builds technology products in a portfolio model.",
+        "company": "Able"
+    },
+
+    {
+        "title": "Game Developer",
+        "type": "Full time",
+        "seniority": "Semi Senior",
+        "salary": "$3000",
+        "location": "Buenos Aires",
+        "expected": "Build server-side applications as well as RESTful APIs with Ruby and Rails Collaborate with a super talented team of Engineers",
+        "looking": "You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members",
+        "requirements": "2+ years professional experience as a software engineer or equivalent",
+        "description"  :"Able builds technology products in a portfolio model.",
+        "company": "Able"
+    }
+]

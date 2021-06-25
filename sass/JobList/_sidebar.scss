@@ -52,6 +52,7 @@ main {
     .job-nav-contry {
       width: 104px;
       height: 40px;
+      padding: 8px;
     }
     .job-nav-type {
       width: 85px;
@@ -72,10 +73,9 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
-   
+
     background-color: $backgroug;
     .jobs-for-you {
-
       width: 1031px;
       margin-top: 64px;
       margin-left: 104px;
@@ -89,7 +89,6 @@ main {
         .job-search {
           width: 283px;
           height: 40px;
-
         }
 
         .job-title {
@@ -126,127 +125,130 @@ main {
         width: 100%;
         height: 854px;
 
-    
-
         div {
-          .button-selection {
-            width: 1031px;
-            height: 82px;
-            padding: 0;
-            background: #ffffff;
-            /* shadow-base */
-
-            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06),
-              0px 1px 3px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            .job-compani {
-              .logo-compani {
-                height: 36px;
-                margin: 25px 15px 21px 20px;
-              }
-              .job-title {
-                width: 190px;
-                height: 27px;
-                color: #4a5568;
-
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 27px;
-                margin-top: 16px;
-                margin-bottom: 4px;
-              }
-              span {
-                p {
-                  margin: 0;
-                  margin-right: 9px;
+          ul{
+            .button-selection {
+              display: flex;
+              width: 1031px;
+              height: 82px;
+              padding: 0;
+              background: #ffffff;
+              /* shadow-base */
+  
+              box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06),
+                0px 1px 3px rgba(0, 0, 0, 0.1);
+              margin-bottom: 20px;
+              .job-compani {
+                .logo-compani {
+                  height: 36px;
+                  margin: 25px 15px 21px 20px;
+                }
+                .job-title {
+                  width: 190px;
+                  height: 27px;
+                  color: #4a5568;
+  
                   font-style: normal;
-                  font-weight: bold;
-                  font-size: 14px;
-                  line-height: 19px;
+                  font-weight: 600;
+                  font-size: 20px;
+                  line-height: 27px;
+                  margin-top: 16px;
+                  margin-bottom: 4px;
+                }
+                span {
+                  p {
+                    margin: 0;
+                    margin-right: 9px;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 19px;
+                  }
                 }
               }
-            }
-
-            .job-grup2 {
-              position: relative;
-              width: 206px;
-              height: 24px;
-              font-style: normal;
-              font-weight: bold;
-              font-size: 12px;
-              line-height: 16px;
-              text-align: center;
-              color: #ffffff;
-              margin-top: 29px;
-              margin-bottom: 29px;
-              margin-left: 529px;
-              margin-right: 20px;
-
-              & > * {
-                margin-right: 10px;
-              }
-              .pay {
-                position: absolute;
-                color: #000;
-                width: 68px;
-                height: 32px;
-                padding: 5px 8px;
-                margin-bottom: 0;
-                background: #ffffff;
-                font-size: 14px;
-                line-height: 22px;
+  
+              .job-grup2 {
+                position: relative;
+                width: 206px;
+                height: 24px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
                 text-align: center;
-                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-                border-radius: 4px;
-                top: 8px;
-                right: 30px;
-                z-index: 3;
-              }
-              .hov {
-                position: relative;
-                width: 24px;
-                overflow: hidden;
-                height: 50px;
-                padding-top: 12px;
-
-                &:hover {
-                  overflow: visible;
-                }
-              }
-
-              .arow {
-                position: relative;
-                svg {
-                  position: absolute;
-                  top: -18px;
-                  right: -14px;
-                  left: 61px;
-                  bottom: 6px;
-                  z-index: 5;
-                }
-              }
-
-              .c {
-                background-color: $secondary;
-                padding: 2px;
-                margin-bottom: 0;
-              }
-              .job-time {
-                width: 61px;
-                height: 20px;
-              }
-              .job-grade {
-                width: 43px;
-                height: 20px;
+                color: #ffffff;
+                margin-top: 29px;
+                margin-bottom: 29px;
+                margin-left: 529px;
                 margin-right: 20px;
-              }
-              .date {
-                color: $gray-date;
-                margin-bottom: 0;
+  
+                & > * {
+                  margin-right: 10px;
+                }
+                .pay {
+                  position: absolute;
+                  color: #000;
+                  width: 68px;
+                  height: 32px;
+                  padding: 5px 8px;
+                  margin-bottom: 0;
+                  background: #ffffff;
+                  font-size: 14px;
+                  line-height: 22px;
+                  text-align: center;
+                  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+                  border-radius: 4px;
+                  top: 8px;
+                  right: 30px;
+                  z-index: 3;
+                }
+                .hov {
+                  position: relative;
+                  width: 24px;
+                  overflow: hidden;
+                  height: 50px;
+                  padding-top: 12px;
+  
+                  &:hover {
+                    overflow: visible;
+                  }
+                }
+  
+                .arow {
+                  position: relative;
+                  svg {
+                    position: absolute;
+                    top: -18px;
+                    right: -14px;
+                    left: 61px;
+                    bottom: 6px;
+                    z-index: 5;
+                  }
+                }
+  
+                .c {
+                  background-color: $secondary;
+                  padding: 2px;
+                  margin-bottom: 0;
+                }
+                .job-time {
+                  width: 61px;
+                  height: 20px;
+                }
+                .job-grade {
+                  width: 43px;
+                  height: 20px;
+                  margin-right: 20px;
+                }
+                .date {
+                  color: $gray-date;
+                  margin-bottom: 0;
+                }
               }
             }
+
           }
+          
         }
         .job-button-load {
           margin-left: 456px;
@@ -302,7 +304,6 @@ main {
           }
         }
 
-       
         ul {
           padding-left: 20px;
           margin-bottom: 24px;
@@ -352,7 +353,6 @@ main {
             line-height: 2.375;
             height: 2.375rem;
             margin-bottom: 12px;
-            
           }
           p {
             margin-bottom: 0;
@@ -375,18 +375,18 @@ main {
             color: #000;
           }
 
-          .modal-posted-job{
+          .modal-posted-job {
             margin-top: 4px;
           }
 
-          .gu21{
+          .gu21 {
             width: 186px;
             height: 40px;
             margin-top: 41px;
             margin-bottom: 16px;
           }
 
-          .line{
+          .line {
             width: 186px;
             padding-top: 16px;
             border-top: 1px solid black;
@@ -413,6 +413,36 @@ main {
     .modal-active {
       display: block;
     }
+  }
+}
+
+.divFile {
+  background-color: #ffffff;
+  width: 104px;
+  height: 40px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015) !important;
+  border-radius: 4px !important;
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  padding: 8px 16px;
+  position: relative;
+  p {
+    margin-bottom: 0;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    color: #595959;
+  }
+
+  #modal-getTJ-input-cv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
   }
 }
 
