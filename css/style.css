@@ -11472,6 +11472,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   background-color: #f7fafc;
+  overflow: auto;
 }
 
 *,
@@ -12272,6 +12273,14 @@ main {
   display: block;
 }
 
+.edit-absolut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 950px;
+}
+
 .divFile {
   background-color: #ffffff;
   width: 104px;
@@ -12557,6 +12566,10 @@ main {
   width: 140px;
   margin-right: 250px;
   margin-left: 491px;
+}
+
+.job-grup2R {
+  left: 879px;
 }
 
 .job {
