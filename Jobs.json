@@ -6,9 +6,9 @@
         "salary": "$1800",
         "jobIntroducction": "Able is seeking a Full-Stack Software Engineer. You will work on a variety of challenging, creative and innovative products that are part of our rapidly growing portfolio. Your experience will serve as a foundation for your growth at our company and we expect that you will keep developing your existing skills by growing your knowledge in areas you had never envisioned before.",
         "location": "Peru",
-        "expected": "Build server-side applications as well as RESTful APIs with Ruby and Rails Collaborate with a super talented team of Engineers",
-        "looking": "You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members",
-        "requirements": "2+ years professional experience as a software engineer or equivalent",
+        "expected": ["Build server-side applications as well as RESTful APIs with Ruby and Rails","Collaborate with a super talented team of Engineers"],
+        "looking":  ["Devops Developer You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members","You have a desire to improve Able’s product development practices and the experience to follow-through on implementation"],
+        "requirements": ["DevOps 2+ years professional experience as a software engineer or equivalent","Thorough and up-to-date knowledge of JavaScript and/or Ruby/Rails"],
         "description"  :"Able builds technology products in a portfolio model.",
         "company": "Able"
     },
@@ -19,9 +19,9 @@
         "salary": "$1800",
         "location": "Peru",
         "jobIntroducction": "this is the job introducction to Data Scientist Developer .",
-        "expected": "Build server-side applications as well as RESTful APIs with Ruby and Rails Collaborate with a super talented team of Engineers",
-        "looking": "You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members",
-        "requirements": "2+ years professional experience as a software engineer or equivalent",
+        "expected": ["Build server-side applications as well as RESTful APIs with Ruby and Rails","Collaborate with a super talented team of Engineers"],
+        "looking":  ["Data Scientist You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members","You have a desire to improve Able’s product development practices and the experience to follow-through on implementation"],
+        "requirements": ["Data 2+ years professional experience as a software engineer or equivalent","Thorough and up-to-date knowledge of JavaScript and/or Ruby/Rails"],
         "description"  :"Able builds technology products in a portfolio model.",
         "company": "Able"
     },
@@ -33,9 +33,9 @@
         "salary": "$3000",
         "location": "Buenos Aires",
         "jobIntroducction": "this is the job introducction to game developer.",
-        "expected": "Build server-side applications as well as RESTful APIs with Ruby and Rails Collaborate with a super talented team of Engineers",
-        "looking": "You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members",
-        "requirements": "2+ years professional experience as a software engineer or equivalent",
+        "expected": ["Build server-side applications as well as RESTful APIs with Ruby and Rails","Collaborate with a super talented team of Engineers"],
+        "looking":  ["Game Developer You have a passion for collaborative problem solving and the willingness to challenge, debate and form relationships with team members","You have a desire to improve Able’s product development practices and the experience to follow-through on implementation"],
+        "requirements": ["Game 2+ years professional experience as a software engineer or equivalent","Thorough and up-to-date knowledge of JavaScript and/or Ruby/Rails"],
         "description"  :"Able builds technology products in a portfolio model.",
         "company": "Able"
     }
