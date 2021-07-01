@@ -226,7 +226,7 @@
             <div class="job-button-result">
               <div class="list-group" id="button-selection-job">
                 <ul class="p-0 " id="jobListResult">
-
+<!-- 
                   <button
                     id="jobButtonResult"
                     type="button"
@@ -297,7 +297,7 @@
                                 fill="white"
                               />
                             </svg> -->
-                          </div>
+                          <!-- </div>
                         </div>
                       </div>
 
@@ -315,6 +315,7 @@
 
                     </div>
                   </button>
+                  
                   <button
                     id="jobButtonResult"
                     type="button"
@@ -397,8 +398,7 @@
                       </p>
                       <p class="date">Today</p>
                     </div>
-                  </button>
- 
+                  </button> --> 
                 </ul>
               </div>
               <button class="btn btn-primary job-button-load none">LOAD MORE</button>
@@ -891,26 +891,29 @@
                   <img src="../assets/arrow-left.svg" alt="" />
                   See more jobs
                 </button>
-                <p class="date">Posted Feb 24</p>
-                <h1>Software Engineer</h1>
+                <p class="date dat-modalElement">Posted Feb 24</p>
+                <h1 id="modalJobTitle" class="dat-modalElement" dat-modalElement="title">Software Engineer</h1>
                 <div class="modal-checkable">
                   <p
-                    id="modal-jobDetails-type"
-                    class="bg-primary d-inline-block rounded-3 check text-white"
+                    id="modalJobType"
+                    dat-modalElement="type"
+                    class="bg-primary d-inline-block rounded-3 check text-white modalE dat-modalElement"
                   >
                     Full time
                   </p>
                   <p
-                    id="modal-jobDetails-seniority"
-                    class="bg-primary d-inline-block rounded-3 check text-white"
+                    id="modalJobSeniority"
+                    dat-modalElement="seniority"
+                    class="bg-primary d-inline-block rounded-3 check text-white dat-modalElement"
                   >
                     Junior
                   </p>
                 </div>
 
                 <p
-                  class="modal-description size text-wrap h-auto fs-6"
-                  id="modal-jobDetails-description"
+                  id="modalJobIntroducction"
+                  dat-modalElement="introduccitionJob"
+                  class="modal-description size text-wrap h-auto fs-6 dat-modalElement"
                 >
                   Able is seeking a Full-Stack Software Engineer. You will work
                   on a variety of challenging, creative and innovative products
@@ -924,7 +927,7 @@
                 <p class="modal-jobDetails-head fw-bold">
                   What will be expected of you:
                 </p>
-                <ul class="modal-expected-of-you size text-wrap h-auto">
+                <ul class="modal-expected-of-you size text-wrap h-auto dat-modalElement" id="modalJobExpected" dat-modalElement="expected">
                   <li>
                     Build server-side applications as well as RESTful APIs with
                     Ruby and Rails
@@ -949,7 +952,7 @@
                   What we are looking for:
                 </p>
 
-                <ul class="modal-looking-for size text-wrap h-auto">
+                <ul id="modalJobLooking" class="modal-looking-for size text-wrap h-auto dat-modalElement" dat-modalElement="looking">
                   <li>
                     You have a passion for collaborative problem solving and the
                     willingness to challenge, debate and form relationships with
@@ -967,7 +970,7 @@
                   </li>
                 </ul>
 
-                <p class="modal-jobDetails-head fw-bold">Job requirements:</p>
+                <p id="modalJobRequirements" class="modal-jobDetails-head fw-bold">Job requirements:</p>
 
                 <ul
                   class="
@@ -975,7 +978,9 @@
                     size
                     text-break text-wrap
                     h-auto
+                    dat-modalElement
                   "
+                  dat-modalElement="requirements"
                 >
                   <li>
                     2+ years professional experience as a software engineer or
@@ -1003,11 +1008,11 @@
                 </ul>
 
                 <p class="modal-jobDetails-head fw-bold">About Able:</p>
-                <p class="modal-about-text size text-break text-wrap h-auto">
+                <p id="modalJobDescriotion" class="modal-about-text size text-break text-wrap h-auto dat-modalElement" dat-modalElement="description">
                   Able builds technology products in a portfolio model. We
                   believe that people, teams, and processes are more important
                   than the ideas themselves, so we’ve focused on bringing great
-                  people together, and investing in their growth. <br /><br />
+                  people together, and investing in their growth. <br/><br />
                   We’ve built products in a variety of industries. Everything
                   from media to finance to toys to healthcare. Sometimes we work
                   with management teams to help their businesses grow faster or
@@ -1025,7 +1030,7 @@
                   orientation, national origin, disability, or veteran status.
                 </p>
 
-                <button class="btn btn-primary" id="modal-button-finaly">
+                <button class="btn btn-primary" id="modalButtonFinaly">
                   Get this job
                 </button>
               </div>
@@ -1039,21 +1044,21 @@
                     />
                   </div>
 
-                  <p class="modal-company-name fw-bold">Able.co</p>
+                  <p id="modalJobTitleCompany" dat-modalElement="companyTitle" class="modal-company-name fw-bold">Able.co</p>
                   <span class="d-flex">
                     <img src="../assets/mdi_location_on.svg" alt="" />
-                    <p>Lima, Peru</p>
+                    <p id="modalJobCityAndCountry" dat-modalElement="cityAndCountry">Lima, Peru</p>
                   </span>
 
-                  <a href="#">
+                  <a id="modalJobWebsite" dat-modalElement="opendWebSide" href="#">
                     <img src="../assets/mdi_open_in_new.svg" alt="" />
                     Open Website</a
                   >
-                  <p class="modal-posted-job">Posted 10 Jobs</p>
+                  <p id="modalJobCandidatesNumber" class="modal-posted-job">Posted 10 Jobs</p>
 
                   <button
+                  id="modalButtonFinaly2"
                     class="btn btn-primary fw-bold gu21 rounded-0"
-                    id="modal-button-finaly"
                   >
                     Get this job
                   </button>

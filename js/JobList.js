@@ -38,22 +38,23 @@ let random = function (min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (1 + max - min) + min);
 };
+/**********Funcion id aleatorios */
 
 /*****Agregar elementos a al lista jobs for you************/
-
 ((d) => {
   const $listJobResult = d.getElementById('jobListResult'),
-    $windowYourProfile = d.getElementById('yourProfile'),
+    //$windowYourProfile = d.getElementById('yourProfile'),
     $windowJobsForYou = d.getElementById('job-for-you'),
-    $jobModal = d.getElementById('modal-job-details');
-
-  //consulta a al banckend en esta caso consulta a un archivo de pruebas
+    $jobModal = d.getElementById('modal-job-details'),
+    $elementsGrup1 = document.getElementsByClassName("dat-modalElement");
+    
+  //consulta al banckend en esta caso consulta a un archivo de pruebas
   fetch('../Jobs.json')
     .then((resp) => resp.json())
     .then((jobs) => {
-      // console.log(jobs);
-      for (jobs of jobs) {
-        // console.log(jobs);
+      console.log("Jobss",jobs);
+      for (job of jobs) {
+         console.log(job);
 
         let ran = random(1, 50);
         let id = 'jobButton' + ran;
@@ -86,13 +87,28 @@ let random = function (min, max) {
         );
 
         $button.setAttribute('aria-current', id);
-        $button.setAttribute('data-search', jobs.title);
+        $button.setAttribute('data-search', job.title);
+        
+        //Agregando eventos a cada boton de la lista
+        // $button.addEventListener("click",event=>{
+        //   console.log(event)
+        //   $windowJobForYou.classList.add("none");
+        //   $jobModal.classList.remove("none");
+        // })
 
         $button.addEventListener('click', (event) => {
+         
           $windowJobsForYou.classList.add('none');
           $jobModal.classList.toggle('none');
+          console.log(event)
+           console.log($button.dataset.search)
+          const data = jobs.find(data => data.title == $button.dataset.search)
+          console.log(data);
+          $elementsGrup1[1].innerText = data.title;
+          $elementsGrup1[2].innerText = data.type;
+          $elementsGrup1[3].innerText = data.seniority;
+          $elementsGrup1[4].innerText = data.jobIntroducction;
 
-          
         });
 
         $divJobCompany.setAttribute('class', 'job-company d-flex');
@@ -112,10 +128,10 @@ let random = function (min, max) {
 
         $pJobTitle.setAttribute('class', 'job-title');
         $pJobTitle.setAttribute('id', 'job-title w-auto');
-        $pJobTitle.innerText = jobs.title;
+        $pJobTitle.innerText = job.title;
         $spanCompanyAndCity.setAttribute('class', 'd-flex');
         $pCompanyAndCity.setAttribute('id', 'companyAndCity');
-        $pCompanyAndCity.innerText = jobs.company + '-' + jobs.location;
+        $pCompanyAndCity.innerText = job.company + '-' + job.location;
 
         $imgjobNationFlag.setAttribute('i', 'log-company');
         id = 'jobNationFlag' + random(1, 100);
@@ -133,14 +149,14 @@ let random = function (min, max) {
         $divpay.setAttribute('class', 'pay');
 
         $psalaryRange.setAttribute('style', 'magin-bottoM:0');
-        $psalaryRange.innerText = jobs.salary;
+        $psalaryRange.innerText = job.salary;
         d = 'M0.5 12L0.500002 0L6.5 6L0.5 12Z';
         fill = 'white';
         $divarow.setAttribute('class', 'arow');
         $pJobTime.setAttribute('class', 'job-time c');
-        $pJobTime.innerText = jobs.type;
+        $pJobTime.innerText = job.type;
         $pJobSeniority.setAttribute('class', 'job-grade c');
-        $pJobSeniority.innerText = jobs.seniority;
+        $pJobSeniority.innerText = job.seniority;
         $pData.setAttribute('class', 'date ');
         $pData.innerText = 'Today';
 
@@ -171,8 +187,8 @@ let random = function (min, max) {
 })(document);
 /*****Agregar elementos a al lista jobs for you************/
 
-/******Job Buttons ****** */
 
+/******Job ButtonsResult ****** */
 ((d) => {
   const $jobButton = d.getElementById('jobButtonResult'),
     $windowJobForYou = d.getElementById('job-for-you'),
@@ -182,11 +198,7 @@ let random = function (min, max) {
     $buttonYourProfile = d.getElementById('yourProfile-button'),
     $buttonModalReturn = d.getElementById('modal-button-return');
 
-  $jobButton.addEventListener("click",event=>{
-    console.log(event)
-    $windowJobForYou.classList.add("none");
-    $jobModal.classList.remove("none");
-  })
+ 
   $buttonYourApplication.addEventListener('click', (event) => {
     if (!$buttonJobForYou.classList.contains('none'))
       $jobModal.classList.add('none');
@@ -204,4 +216,4 @@ let random = function (min, max) {
       $jobModal.classList.add('none');
   });
 })(document);
-/******Job Buttons ****** */
+/******Job ButtonsResul ****** */
