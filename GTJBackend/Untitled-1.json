@@ -1,0 +1,17 @@
+db.products.insert([
+    {
+    "name": "mouse",
+    "description": "razer mouse",
+    "tags": ["computers", "gaming"],
+    "quantity": 3,
+    "created_at": new Date()
+    },
+    {
+        "name": "monitor",
+        "description": "lg monitor",
+        "tags": ["computers", "gaming"],
+        "quantity": 14,
+        "created_at": new Date()
+    }
+
+])
