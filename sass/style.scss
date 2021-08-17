@@ -28,6 +28,7 @@ body {
 *::before {
   box-sizing: inherit;
 }
+/******Reset****/
 
 h1 {
   margin: 0;
@@ -79,7 +80,20 @@ nav{
   display: none !important;
 }
 /****Login/****/
+.val-form{
+  & [required]:valid{
+    border: thin solid #4caf50 !important;
+  }
 
+  
+  & [required]:invalid{
+    border: thin solid #f44336 !important;
+  }
+
+  textarea{
+    resize: none;
+  }
+}
 
 
 /****Header****/

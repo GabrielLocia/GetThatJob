@@ -45,12 +45,6 @@
   }
 })(document);
 
-function GetUser(){
-   
-
-  
-}
-
 /**validando inicio de sesion ****/
 ((d) => {
   const $submitButton = d.getElementById('loginButton'),
@@ -61,36 +55,33 @@ function GetUser(){
   $submitButton.addEventListener('click', (event) => {
     console.log(event);
     event.preventDefault();
+    console.log($loginRole.innerText)
 
-    fetch('../Pruebas.json')
-      .then((resp) => resp.json())
-      .then((user) => {
-        console.log(user);
-        for (user of user) {
-          console.log(user);
-          if (
-            $emailInput.value == user['email'] &&
-            $passwordInput.value == user['password']
-          ) {
-            console.log('entrar');
-            console.log($loginRole.innerText);
-            if($loginRole.innerText==="As Recreuiter")
-                location.href = "../views/Recreuiter.html";
-            else
-                location.href = "../views/JobList.html";
-          } else console.log('Correo o contreaseña incorrecta');
-        }
-
-        //   user.forEach(user=>{
-        //     console.log("Email: ",$emailInput.value);
-        //     console.log(user['email']);
-        //     if($emailInput.value == user['email'] & $passwordInput.value==user['password']){
-        //         console.log("entrar");
-        //         break;
-        //     }
-        //     else
-        //         console.log("Correo o contreaseña incorrecta");
-        //   })
+    fetch('http://127.0.0.1:5000/signIn', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: $emailInput.value,
+        password: $passwordInput.value,
+        role: $loginRole.innerText
+      }),
+    })
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+      .then((json) => {
+        if(json.message === "ok"){
+          console.log($loginRole.innerText);
+          if ($loginRole.innerText === 'As Recreuiter')
+            location.href = '../views/Recreuiter.html';
+          else location.href = '../views/JobList.html';
+          
+        }else
+          alert(json.message);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   });
 })(document);
+/**validando inicio de sesion ****/

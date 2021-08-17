@@ -11482,6 +11482,7 @@ body {
           box-sizing: inherit;
 }
 
+/******Reset****/
 h1, .h1 {
   margin: 0;
   font-size: 2.875rem;
@@ -11530,6 +11531,18 @@ nav {
 }
 
 /****Login/****/
+.val-form [required]:valid {
+  border: thin solid #4caf50 !important;
+}
+
+.val-form [required]:invalid {
+  border: thin solid #f44336 !important;
+}
+
+.val-form textarea {
+  resize: none;
+}
+
 /****Header****/
 header div {
   padding-left: 0;
@@ -12509,18 +12522,6 @@ main {
   border-radius: 0 !important;
 }
 
-.sing-up .form .login-form [required]:valid {
-  border: thin solid #4caf50 !important;
-}
-
-.sing-up .form .login-form [required]:invalid {
-  border: thin solid #f44336 !important;
-}
-
-.sing-up .form .login-form textarea {
-  resize: none;
-}
-
 /************JobList************/
 /************Recreuiter************/
 .modal-content-title {
@@ -12611,6 +12612,15 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.editable {
+  width: 400px;
+  height: 127px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  overflow: auto;
 }
 
 /****Sing-Up-Recreuiter****/

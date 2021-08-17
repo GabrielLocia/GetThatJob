@@ -158,7 +158,25 @@ const htmlStructure = (
 
   $listJobResult.appendChild($button);
 };
-/**********Funcion para crear estructura html */
+
+/**********Funcion para agregar elementos li */
+const addLi = (ul,data)=>{
+  data.forEach((element) => {
+    const li = document.createElement('li');
+    li.innerText = element;
+    console.log(li);
+    ul.appendChild(li);
+  });
+};
+
+/**********Funcion para eliminar elementos li */
+const removeLi = (ul) => {
+  const $delateLi = ul.querySelectorAll('li');
+  if ($delateLi)
+    $delateLi.forEach((element) => {
+      ul.removeChild(element);
+    });
+};
 
 /**********Funcion Creadora de Botones  */
 const createButtonResult = (
@@ -208,42 +226,41 @@ const createButtonResult = (
     $pData,
     id,
     $pCompanyAndCity
-    );
+  );
   //Configurando atributos
-    
-    //Agregando eventos a cada boton de la lista
-    $button.addEventListener('click', (event) => {
-      $windowJobsForYou.classList.add('none');
-      $jobModal.classList.toggle('none');
-      console.log(event);
-      console.log($button.dataset.search);
-      const data = jobs.find((data) => data.title == $button.dataset.search);
-      console.log($elementsGrup1);
-      $elementsGrup1[1].innerText = data.title;
-      $elementsGrup1[2].innerText = data.type;
-      $elementsGrup1[3].innerText = data.seniority;
-      $elementsGrup1[4].innerText = data.jobIntroducction;
-      const $delateLi = $elementsGrup1[5].querySelectorAll('li');
 
-      if($delateLi){
-        $delateLi.forEach(element=>{
-          $elementsGrup1[5].removeChild(element);
-        });
-      }
+  //Agregando eventos a cada boton de la lista
+  $button.addEventListener('click', (event) => {
+    $windowJobsForYou.classList.add('none');
+    $jobModal.classList.toggle('none');
+    // console.log(event);
+    // console.log($button.dataset.search);
+    const data = jobs.find((data) => data.title == $button.dataset.search);
+    console.log($elementsGrup1);
+    $elementsGrup1[1].innerText = data.title;
+    $elementsGrup1[2].innerText = data.type;
+    $elementsGrup1[3].innerText = data.seniority;
+    $elementsGrup1[4].innerText = data.jobIntroducction;
 
-      console.log("li ha eliminar:", $delateLi);
-      data.expected.forEach(element =>{
-      
-        const li = document.createElement("li");
-        li.innerText = element;
-        console.log(li);
-        $elementsGrup1[5].appendChild(li);
-      });
-      // $elementsGrup1[5].innerText = data.jobIntroducction;
-      
-    });
-    //Agregando eventos a cada boton de la lista
+    removeLi($elementsGrup1[5]);
+    addLi($elementsGrup1[5],data.expected);
+
+    removeLi($elementsGrup1[6]);
+    addLi($elementsGrup1[6],data.looking);
+
+    removeLi($elementsGrup1[7]);
+    addLi($elementsGrup1[7],data.requirements);
+
+    $elementsGrup1[8].innerText = data.company
+
+    console.log(data.description)
+    $elementsGrup1[9].innerText = data.description;
+
     
+    
+  });
+  //Agregando eventos a cada boton de la lista
+
   /******Extructura html**** */
   htmlStructure(
     $button,
@@ -265,7 +282,7 @@ const createButtonResult = (
     id,
     $pCompanyAndCity,
     $listJobResult
-    );
+  );
   /******Extructura html**** */
 };
 
@@ -287,6 +304,7 @@ const createButtonResult = (
 
         let ran = random(1, 50);
         let id = 'jobButton' + ran;
+
         createButtonResult(
           $listJobResult,
           $windowJobsForYou,
