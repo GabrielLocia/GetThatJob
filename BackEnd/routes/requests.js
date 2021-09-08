@@ -1,6 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const sequelize = require('../db');
+const multer = require('multer');
+const mimeTypes = require('mime-types');
+
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'cv')
+      }, 
+    
+  filename: function (req, file, cb) {
+    cb("",Date.now() + file.originalname + "." + mimeTypes.extension(file.mimetype));
+  }
+});
 
 // Get all jobs
 router.get('/', async (req, res) => {
@@ -9,7 +22,7 @@ router.get('/', async (req, res) => {
   return res.status(200).json({ data: requests });
 });
 
-// Creating a new job
+// Creating a new request
 router.post('/', async (req, res) => {
   const { body } = req;
 
