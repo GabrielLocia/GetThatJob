@@ -1,0 +1,175 @@
+$backgroug: #f7fafc;
+.application {
+  position: relative;
+  height: 1355px;
+  width: 1000px;
+  margin-top: 64px;
+  margin-left: 100px;
+  .application-title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    margin-bottom: 40px;
+    width: 16.563rem;
+    height: 3rem;
+  }
+  .table .application-table-colorhead {
+    --bs-table-accent-bg: #fafafa;
+  }
+
+  .row-application-job {
+    width: 200px !important;
+    height: 54px !important;
+    padding: 0 !important;
+  }
+
+  .selectable {
+    position: relative;
+  }
+
+  .application-button-table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    opacity: 0;
+  }
+  .modal {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+  }
+  .modal-dialog {
+    max-width: 1024px;
+    height: 1347px;
+  }
+
+  .modal-content {
+    top: 80px;
+    left: 60px;
+  }
+
+  .btn-close {
+    margin-right: 12px;
+  }
+
+  .modal-body {
+    padding: 0;
+    width: 650px;
+    height: 1250px;
+    margin-left: 10px;
+    background-color: $backgroug;
+    width: 1024px;
+    margin-right: 150px;
+  }
+
+  .tab-content {
+    margin-bottom: 40px;
+  }
+
+  .modal-app-aline {
+    margin-left: 24px;
+    margin-top: 40px;
+    margin-bottom: 7px;
+  }
+
+  .modal-header {
+    width: 824px;
+    height: 40px;
+    margin-left: 200px;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    .modal-app-button {
+      margin-top: 20px;
+      width: 120px;
+      height: 35px;
+      padding: 0;
+    }
+  }
+
+  .modal-title-position {
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    z-index: 3;
+  }
+  .modal-title-job {
+    color: #262626;
+    width: 156px;
+    height: 56px;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .modal-mar80 {
+    padding-top: 80px !important;
+
+    button {
+      color: #096dd9;
+    }
+
+    .tred {
+      color: #f5222d;
+    }
+  }
+
+  .modal-app-professionalExperience {
+    width: 537px;
+    height: 196px;
+  }
+
+  // .modal {
+  //   width: 1200px;
+  //   background-color: rgba(0, 0, 0, 0.25);
+  //   backdrop-filter: blur(8px);
+  //   height: 1507px;
+  //   .modal-application {
+
+  //     width: 1024px;
+
+  //     height: 1347px;
+
+  //     .modal-header {
+  //       width: 824px;
+  //       height: 40px;
+  //       margin-left: 200px;
+  //       padding: 0;
+  //       font-style: normal;
+  //       font-weight: normal;
+  //       font-size: 14px;
+  //       line-height: 22px;
+  //       .modal-app-button {
+  //         margin-top: 20px;
+  //         width: 120px;
+  //         height: 35px;
+  //         padding: 0;
+  //       }
+  //     }
+
+  //     .modal-body {
+  //       padding: 0;
+  //       width: 650px;
+  //       height: 1250px;
+  //       background-color: $backgroug;
+  //     }
+  //   }
+  // }
+}
+
+.nav-links {
+  background: none;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.nav-pills .nav-links.active {
+  background-color: white !important;
+  border: 0;
+  border-radius: 0.25rem;
+  border-bottom: 2px solid #096dd9;
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem 1rem;
+}

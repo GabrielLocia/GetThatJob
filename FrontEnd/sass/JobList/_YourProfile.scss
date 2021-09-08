@@ -1,0 +1,50 @@
+$backgroug: #f7fafc;
+
+.sing-up {
+   .form {
+    width: 400px;
+    height: 925px;
+    margin: 64px 420px 0 420px;
+
+    label{
+        color: #262626;
+    }
+
+    .editProfile {
+      font-size: 2rem;
+    }
+    .form-your-profile-suggestions {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 22px;
+      color: #8C8C8C;
+    }
+    .deleteaccout{
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        color: #F5222D;
+        margin-top: 0.75rem;
+    }
+    #form-your-profile-button {
+      width: 135px;
+      height: 40px;
+      border-radius: 0 !important;
+    }
+
+    // .val-form{
+    //     & [required]:valid{
+    //       border: thin solid #4caf50 !important;
+    //     }
+      
+        
+    //     & [required]:invalid{
+    //       border: thin solid #f44336 !important;
+    //     }
+      
+    //     textarea{
+    //       resize: none;
+    //     }
+    // }
+  }
+}
