@@ -1,8 +1,8 @@
 const { DataTypes, Sequelize } = require('sequelize');
 
-module.exports = (sequelize) =>
-  sequelize.define('jobs', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+module.exports = (sequelize) => {
+  const job = sequelize.define('jobs', {
+    // id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     recruiterId: {
       type: Sequelize.INTEGER,
       references: {
@@ -19,7 +19,18 @@ module.exports = (sequelize) =>
     expected: DataTypes.TEXT,
     lokkin: DataTypes.TEXT,
     requirements: DataTypes.TEXT,
-    description:DataTypes.TEXT,
+    description: DataTypes.TEXT,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
   });
+
+  job.associate = function (models) {
+
+    job.hasMany(models.requests, {
+      foreignKey: 'jobId',
+      sourceKey: 'id',
+    });
+  };
+
+  return job;
+};

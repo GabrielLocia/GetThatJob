@@ -1,8 +1,8 @@
 const { DataTypes, Sequelize } = require('sequelize');
 
-module.exports = (sequelize) =>
-  sequelize.define('candidates', {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+module.exports = (sequelize) => {
+  const candidate = sequelize.define('candidates', {
+    // id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     professionalId: {
       type: Sequelize.INTEGER,
       references: {
@@ -20,3 +20,13 @@ module.exports = (sequelize) =>
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
   });
+
+  candidate.associate = function (models) {
+    candidate.hasMany(models.requests, {
+      foreignKey: 'candidateId',
+      sourceKey: 'id',
+    });
+  };
+
+  return candidate;
+};

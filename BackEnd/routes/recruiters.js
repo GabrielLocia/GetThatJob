@@ -2,24 +2,26 @@ const express = require('express');
 const router = express.Router();
 const sequelize = require('../db');
 
-// Get candidate
+// Get recuiter
 router.get('/', async (req, res) => {
   // const candidate = await sequelize.models.candidates.findAndCountAll();
-  const candidate = await sequelize.models.candidates.findOne({
-    where: { professionalId: req.user.id },
-    include: [
-      {
-        attributes: {
-          exclude: ['password'],
-        },
-        model: sequelize.models.professionals,
-        where: { id: req.user.id },
-      },
-    ],
+  const recruiter = await sequelize.models.recruiters.findOne({
+    where: { id: req.user.id },
+    attributes: {
+            exclude: ['password']
+          }
+
+    // include: [
+    //   {
+    //     ,
+    //     model: sequelize.models.professionals,
+    //     where: { id: req.user.id },
+    //   },
+    // ],
   });
 
   
-  return res.status(200).json({ data: candidate });
+  return res.status(200).json({ data: recruiter });
 });
 //get professional email
 router.get('/professional', async (req, res) => {

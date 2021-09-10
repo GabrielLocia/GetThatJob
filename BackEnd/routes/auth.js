@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const mimeTypes = require('mime-types');
 
-
+//Middlewares
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'logo')
@@ -20,7 +20,7 @@ const upload = multer({
   storage: storage
 });
 
-
+//Routs
 router.post('/login', async (req, res) => {
   const { body } = req;
   const user = await sequelize.models.professionals.findOne({

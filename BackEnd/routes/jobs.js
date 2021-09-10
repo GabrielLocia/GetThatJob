@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
     seniority: body.seniority,
     location: body.location,
     introduccion: body.introduccion,
+    description:body.description,
     expected: body.expected,
     lokkin: body.lokkin,
     requirements: body.requirements,
