@@ -5,7 +5,7 @@ const authenticate = require('../middlewares/authentication');
 router.use('/auth', require('./auth'));
 router.use('/jobs', authenticate, require('./jobs'));
 router.use('/candidates', authenticate, require('./candidates'));
-router.use('/recruiter', authenticate, require('./recruiters'));
+router.use('/recruiters', authenticate, require('./recruiters'));
 router.use('/requests', authenticate, require('./requests'));
 router.use('/users', require('./users'));
 

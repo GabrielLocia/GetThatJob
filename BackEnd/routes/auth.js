@@ -39,7 +39,7 @@ router.post('/login', async (req, res) => {
 
   // Generate a token
   const token = jwt.sign({ userId: user.id }, 'secretkey', {
-    expiresIn: '10h',
+    expiresIn: process.env.JWT_EXPIRESIN,
   });
 
   return res.json({
@@ -75,7 +75,8 @@ router.post('/signup', async (req, res) => {
   return res.json({ message: 'Your account was created successfully' });
 });
 
-router.post('/recreuiter/login', async (req, res) => {
+
+router.post('/recruiters/login', async (req, res) => {
   const { body } = req;
   const user = await sequelize.models.recruiters.findOne({
     where: {
@@ -102,7 +103,7 @@ router.post('/recreuiter/login', async (req, res) => {
   });
 });
 
-router.post('/recruiter/signup',upload.single('logo'), async (req, res) => {
+router.post('/recruiters/signup',upload.single('logo'), async (req, res) => {
   const { body } = req;
  
   let recruiter = await sequelize.models.recruiters.findOne({
@@ -132,5 +133,7 @@ router.post('/recruiter/signup',upload.single('logo'), async (req, res) => {
   await recruiter.save();
   return res.json({ message: 'Your account was created successfully' });
 });
+
+
 
 module.exports = router;
