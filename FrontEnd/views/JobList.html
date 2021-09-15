@@ -759,6 +759,7 @@
             role="tabpanel"
             aria-labelledby="v-pills-messages-tab"
           >
+
             <div id="form-your-profile" class="form">
               <div class="mb-3">
                 <p class="editProfile fw-bold">Edit your profile</p>
@@ -767,7 +768,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control"
+                  class="profileform-control form-control"
                   id="form-your-profile-name"
                   placeholder="name"
                 />
@@ -782,7 +783,7 @@
                 >
                 <input
                   type="email"
-                  class="form-control"
+                  class="profileform-control form-control"
                   id="form-your-profile-email"
                   placeholder="name@example.com"
                 />
@@ -796,8 +797,8 @@
                   >Phone Numer</label
                 >
                 <input
-                  type="number"
-                  class="form-control"
+                  type="text"
+                  class="profileform-control form-control"
                   id="form-your-profile-number"
                   placeholder="98745321"
                 />
@@ -812,7 +813,7 @@
                 >
                 <input
                   type="email"
-                  class="form-control"
+                  class="profileform-control form-control"
                   id="form-your-profile-description"
                   placeholder="e.g Software Engineer, Mememaster, Pokemaster"
                 />
@@ -826,7 +827,7 @@
                   >Professional Experience</label
                 >
                 <textarea
-                  class="form-control"
+                  class="profileform-control form-control"
                   id="form-your-profile-experience"
                   rows="3"
                 ></textarea>
@@ -841,7 +842,7 @@
                 >
                 <input
                   type="email"
-                  class="form-control"
+                  class="profileform-control form-control"
                   id="form-your-profile-linkedln"
                   placeholder="https://linkedin/in/your-name-here"
                 />
@@ -855,7 +856,7 @@
                 >
                 <input
                   type="email"
-                  class="form-control"
+                  class="profileform-control form-control"
                   id="form-your-profile-github"
                   placeholder="https://github.com/your-user-here"
                 />
@@ -863,7 +864,7 @@
                   If you are a developer, a good GitHub profile will tell more about your skills.
                 </p>
                 <button
-                  id="form-your-profile-button  "
+                  id="form-your-profile-button"
                   class="btn btn-outline-primary"
                 >
                   Save Change
@@ -1035,27 +1036,29 @@
                   Get this job
                 </button>
               </div>
-              <div class="modal-grup2">
-                <div class="grup21">
+              <div class="modal-grup2 d-flex flex-column align-items-center justify-content-center">
+
+                <!-- <div class="grup21"> -->
+
                   <div style="width: 50px; height: 50px">
                     <img
-                      class="moda-y w-100"
+                      class="dat-modalElement moda-y w-100"
                       src="../assets/Able50.png"
                       alt=""
                     />
                   </div>
 
-                  <p id="modalJobTitleCompany" dat-modalElement="companyTitle" class="modal-company-name fw-bold">Able.co</p>
+                  <p id="modalJobTitleCompany" dat-modalElement="companyTitle" class="modal-company-name dat-modalElement fw-bold">Able.co</p>
                   <span class="d-flex">
                     <img src="../assets/mdi_location_on.svg" alt="" />
-                    <p id="modalJobCityAndCountry" dat-modalElement="cityAndCountry">Lima, Peru</p>
+                    <p id="modalJobCityAndCountry" class= "dat-modalElement" dat-modalElement="cityAndCountry">Lima, Peru</p>
                   </span>
 
-                  <a id="modalJobWebsite" dat-modalElement="opendWebSide" href="#">
+                  <a id="modalJobWebsite"class="dat-modalElement" dat-modalElement="opendWebSide" href="#">
                     <img src="../assets/mdi_open_in_new.svg" alt="" />
                     Open Website</a
                   >
-                  <p id="modalJobCandidatesNumber" class="modal-posted-job">Posted 10 Jobs</p>
+                  <p id="modalJobCandidatesNumber" class="modal-posted-job dat-modalElement">Posted 10 Jobs</p>
 
                   <button
                   id="modalButtonFinaly2"
@@ -1069,7 +1072,7 @@
                       <img src="../assets/arrow-left.svg" alt="" />
                     </button>
                   </div>
-                </div>
+                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -1156,6 +1159,6 @@
     </main>
 
     <script src="../js/JobList.js" type="module"></script>
-    <script src="../libs/bootstrap-5.0.1/dist/js/bootstrap.min.js"></script>
+    <script src="../libs/bootstrap-5.1.1/dist/js/bootstrap.min.js "></script>
   </body>
 </html>
