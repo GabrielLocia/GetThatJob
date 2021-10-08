@@ -8,26 +8,27 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-     await queryInterface.createTable('jobs', {
+     await queryInterface.createTable('requests', {
       id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
-      recruiterId: {
+      candidateId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'recruiters',
+          model: 'candidates',
           key: 'id'
         }
       },
-      title: Sequelize.STRING,
-      type: Sequelize.STRING,
-      seniority: Sequelize.STRING,
-      location: Sequelize.TEXT,
-      introduccion: Sequelize.TEXT,
-      expected: Sequelize.TEXT,
-      lokkin: Sequelize.TEXT,
-      requirements: Sequelize.TEXT,
-      description:Sequelize.TEXT,
+      jobId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'jobs',
+          key: 'id'
+        }
+      },
+      cv: Sequelize.TEXT,
+      experience: Sequelize.TEXT,
+      interest: Sequelize.TEXT,
       createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE,
+      updatedAt: Sequelize.DATE
     });
   },
 
@@ -38,6 +39,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-     await queryInterface.dropTable('jobs');
+      await queryInterface.dropTable('requests');
   }
 };

@@ -21,21 +21,21 @@ router.get('/',permission('recruiter', 'professional'), async (req, res) => {
 // Creating a new job
 router.post('/',permission('recruiter'), async (req, res) => {
   const { body } = req;
-
+  console.log(body.salary);
   const job = await sequelize.models.jobs.create({
     recruiterId: req.user.id,
     title: body.title,
     type: body.type,
     seniority: body.seniority,
+    salary: body.salary,
     location: body.location,
     introduccion: body.introduccion,
-    description:body.description,
-    expected: body.expected,
+    expected:body.expected,
     lokkin: body.lokkin,
     requirements: body.requirements,
   });
   await job.save();
-  return res.status(201).json({ data: job });
+  return res.status(201).json({ data: job , update:true});
 });
 
 // // Update a review by id

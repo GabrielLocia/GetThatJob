@@ -100,7 +100,7 @@ router.post("/recruiters/login", async (req, res) => {
   }
 
   // Generate a token
-
+  console.log("recruiterrrr")
   const token = jwt.sign(
     { userId: user.id, type: "recruiter" },
     process.env.JWT_SECRETKEY,
@@ -124,7 +124,7 @@ router.post("/recruiters/signup", upload.single("logo"), async (req, res) => {
     },
   });
 
-  if (recruiter) {
+  if (  recruiter) {
     return res
       .status(401)
       .json({ message: "this email is already registered" });
@@ -133,7 +133,7 @@ router.post("/recruiters/signup", upload.single("logo"), async (req, res) => {
   // Creating the recruiter
   recruiter = await sequelize.models.recruiters.create({
     company_name: body.name,
-    logo: req.file.path,
+    logo: req.file.filename,
     company_website: body.web,
     administrator_email: body.email,
     password: body.password,

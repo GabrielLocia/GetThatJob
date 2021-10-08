@@ -11,9 +11,7 @@ const authenticate = (req, res, next) => {
 
   jwt.verify(authorization, process.env.JWT_SECRETKEY, async (err, decoded) => {
     console.log("type", decoded.type);
-    if (err)
-
-    
+    if (err)    
       return res.status(401).json({ message: "Unauthorized", error: err });
     if (decoded.type === "professional") {
       console.log("pofesssional");

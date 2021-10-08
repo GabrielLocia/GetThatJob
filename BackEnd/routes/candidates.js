@@ -1,16 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const sequelize = require('../db');
+const sequelize = require("../db");
 
 // Get candidate
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   // const candidate = await sequelize.models.candidates.findAndCountAll();
   const candidate = await sequelize.models.candidates.findOne({
     where: { professionalId: req.user.id },
     include: [
       {
         attributes: {
-          exclude: ['password'],
+          exclude: ["password"],
         },
         model: sequelize.models.professionals,
         where: { id: req.user.id },
@@ -18,29 +18,31 @@ router.get('/', async (req, res) => {
     ],
   });
 
-  
   return res.status(200).json({ data: candidate });
 });
 //get professional email
-router.get('/professional', async (req, res) => {
+router.get("/professional", async (req, res) => {
   // const candidate = await sequelize.models.candidates.findAndCountAll();
   const email = await sequelize.models.professionals.findOne({
     where: { id: req.user.id },
     attributes: {
-      exclude: ['password','type','id','createdAt','updatedAt'],
+      exclude: ["password", "type", "id", "createdAt", "updatedAt"],
     },
   });
   return res.status(200).json({ data: email });
 });
 
 // Creating a new candidate
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {  
+
   const { body } = req;
+
   let candidate = await sequelize.models.candidates.findOne({
     where: { professionalId: req.user.id },
   });
+  
   if (!candidate) {
-    console.log("crear nuevo")
+    console.log("crear nuevo");
     candidate = await sequelize.models.candidates.create({
       professionalId: req.user.id,
       fullname: body.fullname,
@@ -50,10 +52,11 @@ router.post('/', async (req, res) => {
       linkdinurl: body.linkdinurl,
       githuburl: body.githuburl,
     });
+
     await candidate.save();
     return res.status(201).json({ data: candidate });
   } else {
-    console.log("actualizar")
+    console.log("actualizar");
     const updatecandidate = await candidate.update({
       professionalId: req.user.id,
       fullname: body.fullname,
