@@ -95,7 +95,7 @@ main {
           width:auto;
           height: auto;
           font-style: normal;
-          font-weight: bold;
+          font-weight: 700;
           font-size: 32px;
           line-height: 44px;
           display: inline-block;
@@ -319,7 +319,7 @@ main {
         }
 
         .date {
-          width: 104px;
+          width: auto;
           height: 24px;
           padding: 0;
           margin: 0;
@@ -357,6 +357,7 @@ main {
           }
           p {
             margin-bottom: 0;
+            border: 1px solid #3c2dff;
           }
 
           span {

@@ -189,10 +189,10 @@
                     class="form-select job-nav-contry"
                     aria-label=".form-select-lg example"
                   >
-                    <option selected>Coutry</option>
-                    <option value="peru">Peru</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Arequipa">Arequipa</option>
+                    <option selected>States</option>
+                    <option value="peru">Cdmx</option>
+                    <option value="Colombia">Monterrey</option>
+                    <option value="Arequipa">Jalisco</option>
                   </select>
                 </div>
 
@@ -225,8 +225,8 @@
             <!-- Buttons-Jobs -->
             <div class="job-button-result">
               <div class="list-group" id="button-selection-job">
-                <ul class="p-0 " id="jobListResult">
-<!-- 
+                <ul class="p-0" id="jobListResult">
+                  <!-- 
                   <button
                     id="jobButtonResult"
                     type="button"
@@ -297,7 +297,7 @@
                                 fill="white"
                               />
                             </svg> -->
-                          <!-- </div>
+                  <!-- </div>
                         </div>
                       </div>
 
@@ -398,10 +398,12 @@
                       </p>
                       <p class="date">Today</p>
                     </div>
-                  </button> --> 
+                  </button> -->
                 </ul>
               </div>
-              <button class="btn btn-primary job-button-load none">LOAD MORE</button>
+              <button class="btn btn-primary job-button-load none">
+                LOAD MORE
+              </button>
             </div>
             <!-- Buttons-Jobs -->
 
@@ -428,11 +430,12 @@
                   <th scope="col">Data sent</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr class="row-application-job">
+             <tbody id="tableBodyApplication">
+                <!-- <tr class="row-application-job">
                   <td class="selectable">
                     Software Engineer
                     <button
+                      id="buttonModalApplication"
                       type="button"
                       class="btn btn-primary application-button-table"
                       data-bs-toggle="modal"
@@ -445,8 +448,8 @@
                   <td>Able.co</td>
                   <td>Lima</td>
                   <td>Agust 10, 2020</td>
-                </tr>
-              </tbody>
+                </tr> -->
+              </tbody> 
             </table>
 
             <!-- Button trigger modal -->
@@ -464,10 +467,15 @@
               <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content modal-application position-relative">
                   <div class="modal-title-position">
-                    <p class="modal-title-job" id="modal-application-job-title">
+                    <p
+                      class="modal-title-job modalApplication"
+                      id="modal-application-job-title"
+                    >
                       Software Engineer
                     </p>
-                    <p class="modal-company-title fw-bold">Able.co</p>
+                    <p class="modal-company-title fw-bold modalApplication">
+                      Able.co
+                    </p>
                   </div>
                   <div class="modal-header">
                     <ul
@@ -530,10 +538,12 @@
                       <button
                         class="nav-link sidebar-button-jobForYou fw-bold"
                         id="v-pills-home-tab"
-                        data-bs-toggle="pill"
+                        data-bs-toggle="modal"
                         data-bs-target="#moda-application"
                         type="button"
                         role="tab"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
                         aria-controls="modal-applicantion"
                         aria-selected="true"
                       >
@@ -572,7 +582,10 @@
                           </p>
 
                           <p
-                            class="modal-app-professional-content"
+                            class="
+                              modal-app-professional-content
+                              modalApplication
+                            "
                             id="modal-app-professional-content"
                           >
                             This is the professional experience the candidate
@@ -584,7 +597,10 @@
                             Why are you interested in working at Able.co?
                           </p>
                           <p
-                            class="modal-app-professional-content"
+                            class="
+                              modal-app-professional-content
+                              modalApplication
+                            "
                             id="modal-app-proIntersted"
                           >
                             This is the awnser the applicant wrote.
@@ -599,7 +615,14 @@
                       >
                         <div class="modal-app-aline">
                           <p
-                            class="modal-description size text-wrap h-auto fs-6"
+                            class="
+                              modal-description
+                              size
+                              text-wrap
+                              h-auto
+                              fs-6
+                              modalApplication
+                            "
                             id="modal-jobDetails-description modal-marginb"
                           >
                             Able is seeking a Full-Stack Software Engineer. You
@@ -616,7 +639,13 @@
                             What will be expected of you:
                           </p>
                           <ul
-                            class="modal-expected-of-you size text-wrap h-auto"
+                            class="
+                              modal-expected-of-you
+                              size
+                              text-wrap
+                              h-auto
+                              modalApplication
+                            "
                           >
                             <li>
                               Build server-side applications as well as RESTful
@@ -645,7 +674,15 @@
                             What we are looking for:
                           </p>
 
-                          <ul class="modal-looking-for size text-wrap h-auto">
+                          <ul
+                            class="
+                              modal-looking-for
+                              size
+                              text-wrap
+                              h-auto
+                              modalApplication
+                            "
+                          >
                             <li>
                               You have a passion for collaborative problem
                               solving and the willingness to challenge, debate
@@ -673,6 +710,7 @@
                               size
                               text-break text-wrap
                               h-auto
+                              modalApplication
                             "
                           >
                             <li>
@@ -711,6 +749,7 @@
                               size
                               text-break text-wrap
                               h-auto
+                              modalApplication
                             "
                           >
                             Able builds technology products in a portfolio
@@ -759,7 +798,6 @@
             role="tabpanel"
             aria-labelledby="v-pills-messages-tab"
           >
-
             <div id="form-your-profile" class="form">
               <div class="mb-3">
                 <p class="editProfile fw-bold">Edit your profile</p>
@@ -803,7 +841,8 @@
                   placeholder="98745321"
                 />
                 <p class="form-your-profile-suggestions">
-                  Add your phone number to make sure you don't miss any job opportunity.
+                  Add your phone number to make sure you don't miss any job
+                  opportunity.
                 </p>
               </div>
 
@@ -832,7 +871,8 @@
                   rows="3"
                 ></textarea>
                 <p class="form-your-profile-suggestions">
-                  Tells us about your work experience, what did you do before joining this top community?
+                  Tells us about your work experience, what did you do before
+                  joining this top community?
                 </p>
               </div>
 
@@ -861,7 +901,8 @@
                   placeholder="https://github.com/your-user-here"
                 />
                 <p class="form-your-profile-suggestions">
-                  If you are a developer, a good GitHub profile will tell more about your skills.
+                  If you are a developer, a good GitHub profile will tell more
+                  about your skills.
                 </p>
                 <button
                   id="form-your-profile-button"
@@ -893,19 +934,40 @@
                   See more jobs
                 </button>
                 <p class="date dat-modalElement">Posted Feb 24</p>
-                <h1 id="modalJobTitle" class="dat-modalElement" dat-modalElement="title">Software Engineer</h1>
+                <h1
+                  id="modalJobTitle"
+                  class="dat-modalElement"
+                  dat-modalElement="title"
+                >
+                  Software Engineer
+                </h1>
                 <div class="modal-checkable">
                   <p
                     id="modalJobType"
                     dat-modalElement="type"
-                    class="bg-primary d-inline-block rounded-3 check text-white modalE dat-modalElement"
+                    class="
+                      bg-primary
+                      d-inline-block
+                      rounded-3
+                      check
+                      text-white
+                      modalE
+                      dat-modalElement
+                    "
                   >
                     Full time
                   </p>
                   <p
                     id="modalJobSeniority"
                     dat-modalElement="seniority"
-                    class="bg-primary d-inline-block rounded-3 check text-white dat-modalElement"
+                    class="
+                      bg-primary
+                      d-inline-block
+                      rounded-3
+                      check
+                      text-white
+                      dat-modalElement
+                    "
                   >
                     Junior
                   </p>
@@ -914,7 +976,14 @@
                 <p
                   id="modalJobIntroducction"
                   dat-modalElement="introduccitionJob"
-                  class="modal-description size text-wrap h-auto fs-6 dat-modalElement"
+                  class="
+                    modal-description
+                    size
+                    text-wrap
+                    h-auto
+                    fs-6
+                    dat-modalElement
+                  "
                 >
                   Able is seeking a Full-Stack Software Engineer. You will work
                   on a variety of challenging, creative and innovative products
@@ -928,7 +997,17 @@
                 <p class="modal-jobDetails-head fw-bold">
                   What will be expected of you:
                 </p>
-                <ul class="modal-expected-of-you size text-wrap h-auto dat-modalElement" id="modalJobExpected" dat-modalElement="expected">
+                <ul
+                  class="
+                    modal-expected-of-you
+                    size
+                    text-wrap
+                    h-auto
+                    dat-modalElement
+                  "
+                  id="modalJobExpected"
+                  dat-modalElement="expected"
+                >
                   <!-- <li>
                     Build server-side applications as well as RESTful APIs with
                     Ruby and Rails
@@ -953,7 +1032,17 @@
                   What we are looking for:
                 </p>
 
-                <ul id="modalJobLooking" class="modal-looking-for size text-wrap h-auto dat-modalElement" dat-modalElement="looking">
+                <ul
+                  id="modalJobLooking"
+                  class="
+                    modal-looking-for
+                    size
+                    text-wrap
+                    h-auto
+                    dat-modalElement
+                  "
+                  dat-modalElement="looking"
+                >
                   <li>
                     You have a passion for collaborative problem solving and the
                     willingness to challenge, debate and form relationships with
@@ -971,7 +1060,12 @@
                   </li>
                 </ul>
 
-                <p id="modalJobRequirements" class="modal-jobDetails-head fw-bold">Job requirements:</p>
+                <p
+                  id="modalJobRequirements"
+                  class="modal-jobDetails-head fw-bold"
+                >
+                  Job requirements:
+                </p>
 
                 <ul
                   class="
@@ -1008,9 +1102,21 @@
                   </li>
                 </ul>
 
-                <p class="modal-jobDetails-head fw-bold">About <span class="dat-modalElement">Able</span></p>
-                
-                <p id="modalJobDescriotion" class="modal-about-text size text-break text-wrap h-auto dat-modalElement" dat-modalElement="description">
+                <p class="modal-jobDetails-head fw-bold">
+                  About <span class="dat-modalElement">Able</span>
+                </p>
+
+                <p
+                  id="modalJobDescriotion"
+                  class="
+                    modal-about-text
+                    size
+                    text-break text-wrap
+                    h-auto
+                    dat-modalElement
+                  "
+                  dat-modalElement="description"
+                >
                   <!-- Able builds technology products in a portfolio model. We
                   believe that people, teams, and processes are more important
                   than the ideas themselves, so we’ve focused on bringing great
@@ -1031,126 +1137,230 @@
                   race, color, religion, gender, gender identity, sexual
                   orientation, national origin, disability, or veteran status. -->
                 </p>
-
+                <p id="modalRequestsSend" class="none m-1">
+                  <u class="text-primary">Request sent</u>
+                </p>
                 <button class="btn btn-primary" id="modalButtonFinaly">
                   Get this job
                 </button>
-              </div>
-              <div class="modal-grup2 d-flex flex-column align-items-center justify-content-center">
 
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                  <symbol
+                    id="check-circle-fill"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                    />
+                  </symbol>
+                  <symbol
+                    id="info-fill"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+                    />
+                  </symbol>
+                  <symbol
+                    id="exclamation-triangle-fill"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </symbol>
+                </svg>
+
+                <div
+                  id="modalWarning"
+                  class="alert alert-warning  align-items-center mt-2 none"
+                  role="alert"
+                >
+                  <svg
+                    class="bi flex-shrink-0 me-2"
+                    width="24"
+                    height="24"
+                    role="img"
+                    aria-label="Warning:"
+                  >
+                    <use xlink:href="#exclamation-triangle-fill" />
+                  </svg>
+                  <div id="modalWarningContent">An example warning alert with an icon</div>
+                </div>
+              </div>
+              <div
+                class="
+                  modal-grup2
+                  d-flex
+                  flex-column
+                  align-items-center
+                  justify-content-center
+                "
+              >
                 <!-- <div class="grup21"> -->
 
-                  <div style="width: 50px; height: 50px">
-                    <img
-                      class="dat-modalElement moda-y w-100"
-                      src="../assets/Able50.png"
-                      alt=""
-                    />
-                  </div>
+                <div style="width: 50px; height: 50px">
+                  <img
+                    class="dat-modalElement moda-y w-100"
+                    src="../assets/Able50.png"
+                    alt=""
+                  />
+                </div>
 
-                  <p id="modalJobTitleCompany" dat-modalElement="companyTitle" class="modal-company-name dat-modalElement fw-bold">Able.co</p>
-                  <span class="d-flex">
-                    <img src="../assets/mdi_location_on.svg" alt="" />
-                    <p id="modalJobCityAndCountry" class= "dat-modalElement" dat-modalElement="cityAndCountry">Lima, Peru</p>
-                  </span>
-
-                  <a id="modalJobWebsite"class="dat-modalElement" dat-modalElement="opendWebSide" href="#">
-                    <img src="../assets/mdi_open_in_new.svg" alt="" />
-                    Open Website</a
+                <p
+                  id="modalJobTitleCompany"
+                  dat-modalElement="companyTitle"
+                  class="modal-company-name dat-modalElement fw-bold"
+                >
+                  Able.co
+                </p>
+                <span class="d-flex">
+                  <img src="../assets/mdi_location_on.svg" alt="" />
+                  <p
+                    id="modalJobCityAndCountry"
+                    class="dat-modalElement"
+                    dat-modalElement="cityAndCountry"
                   >
-                  <p id="modalJobCandidatesNumber" class="modal-posted-job dat-modalElement">Posted 10 Jobs</p>
+                    Lima, Peru
+                  </p>
+                </span>
 
-                  <button
+                <a
+                  id="modalJobWebsite"
+                  class="dat-modalElement"
+                  dat-modalElement="opendWebSide"
+                  href="#"
+                >
+                  <img src="../assets/mdi_open_in_new.svg" alt="" />
+                  Open Website</a
+                >
+                <p
+                  id="modalJobCandidatesNumber"
+                  class="modal-posted-job dat-modalElement"
+                >
+                  Posted 10 Jobs
+                </p>
+
+                <button
                   id="modalButtonFinaly2"
-                    class="btn btn-primary fw-bold gu21 rounded-0"
-                  >
-                    Get this job
+                  class="btn btn-primary fw-bold gu21 rounded-0"
+                >
+                  Get this job
+                </button>
+                <div class="line">
+                  <button id="modal-button-return">
+                    View All Jobs
+                    <img src="../assets/arrow-left.svg" alt="" />
                   </button>
-                  <div class="line">
-                    <button id="modal-button-return">
-                      View All Jobs
-                      <img src="../assets/arrow-left.svg" alt="" />
-                    </button>
-                  </div>
+                </div>
                 <!-- </div> -->
               </div>
             </div>
           </div>
 
-          <!--Modal-Job Detail--->
+          <!--Modal-Job Requests--->
 
-          <!-- Modal-Get-this-job -->
           <div class="modal-get-this-job sing-up none" id="modal-get-this-job">
             <p
               class="modal-getTJ-title editProfile"
               id="modal-getTj-title"
               style="font-size: 2rem; margin: 64px 0 20px 100px"
             >
-              <span class="text-primary fw-bold"> Get this job:</span> Software
-              Engineer
+              <span id="spanEdidApp" class="text-primary fw-bold">
+                Get this job:</span
+              >
+              Software Engineer
             </p>
 
             <div class="form" style="margin-left: 100px; margin-top: 0">
-              <div class="input-group mb-3 flex-column">
-                <p class="modal-getTJ-title mb-0">Upload your CV</p>
+              <form id="formRequest" enctype="multipart/form-data">
+                <div class="input-group mb-3 flex-column">
+                  <p class="modal-getTJ-title mb-0">Upload your CV</p>
 
-                <div class="divFile">
-                  <div class="d-flex">
-                    <img src="../assets/icon container.svg" alt="" />
-                    <p class="textFile">Upluad</p>
+                  <div class="divFile">
+                    <div class="d-flex">
+                      <img src="../assets/icon container.svg" alt="" />
+                      <p class="textFile">Upluad</p>
+                    </div>
+
+                    <input
+                      type="file"
+                      accept=".pdf, .doc"
+                      name="cv"
+                      class=""
+                      id="modal-getTJ-input-cv"
+                      aria-describedby="inputGroupFileAddon03"
+                      aria-label="Upload"
+                    />
                   </div>
 
-                  <input
-                    type="file"
-                    class=""
-                    id="modal-getTJ-input-cv"
-                    aria-describedby="inputGroupFileAddon03"
-                    aria-label="Upload"
-                  />
+                  <div id="linkCv" class="cvlink align-items-center none mt-1">
+                    <a id="cvURL" class="d-flex cvlinkA" href="">
+                      <img
+                        src="../assets/paper-clip.svg"
+                        alt="paper clip"
+                        class=""
+                      />
+                      <p class="mb-0 ms-1">
+                        <u id="cvFilename" class="d-inline-block">
+                          filename.pdf</u
+                        >
+                      </p>
+                    </a>
+                    <button type="button" class="btn btn-light cvClose">
+                      <img src="../assets/close.svg" alt="close" />
+                    </button>
+                  </div>
+
+                  <p class="form-your-profile-suggestions mb-0">
+                    PDF files only. 5MB max file size.
+                  </p>
                 </div>
 
-                <label id="" for="inputGroupFile03"></label>
+                <div class="modal-experience">
+                  <p class="modal-getTJ-title mb-0">Professional Experience</p>
+                  <textarea
+                    name="experience"
+                    id="modal-experience-texarea"
+                    cols="30"
+                    rows="10"
+                    class="form-control modalTextArea"
+                  ></textarea>
+                  <p class="form-your-profile-suggestions">
+                    Between 300 and 2000 characters.
+                  </p>
+                </div>
 
-                <p class="form-your-profile-suggestions">
-                  PDF files only. 5MB max file size.
-                </p>
-              </div>
+                <div class="modal-getTJ-interested">
+                  <p class="modal-getTJ-title mb-0">
+                    Why are you interested in working at Able.co?
+                  </p>
+                  <textarea
+                    name="interest"
+                    id="modal-getTJ-texarea"
+                    cols="30"
+                    rows="10"
+                    class="form-control modalTextArea"
+                  ></textarea>
+                  <p class="form-your-profile-suggestions">
+                    Between 50 and 1000 characters.
+                  </p>
+                </div>
 
-              <div class="modal-experience">
-                <p class="modal-getTJ-title">Professional Experience</p>
-                <textarea
-                  name="modal-getTJ-texarea"
-                  id="modal-experience-texarea"
-                  cols="30"
-                  rows="10"
-                  class="form-control"
-                ></textarea>
-                <p class="form-your-profile-suggestions">
-                  Between 300 and 2000 characters.
-                </p>
-              </div>
-
-              <div class="modal-getTJ-interested">
-                <p class="modal-getTJ-title">
-                  Why are you interested in working at Able.co?
-                </p>
-                <textarea
-                  name="modal-getTJ-texarea"
-                  id="modal-getTJ-texarea"
-                  cols="30"
-                  rows="10"
-                  class="form-control"
-                ></textarea>
-                <p class="form-your-profile-suggestions">
-                  Between 50 and 1000 characters.
-                </p>
-                <button class="modal-getTJ-button btn btn-outline-primary">
+                <button
+                  id="modal-getJob-button"
+                  class="modal-getTJ-button btn btn-outline-primary"
+                  type="submit"
+                >
                   Get this job!
                 </button>
-              </div>
+              </form>
             </div>
           </div>
-          <!-- End of Modal-Get-this-job -->
+          <!-- End of Modal-Requests -->
         </div>
 
         <!-- Sidebar-Conten -->

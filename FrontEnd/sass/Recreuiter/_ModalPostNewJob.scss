@@ -16,3 +16,32 @@
     padding: 5px;
     overflow: auto;
   }
+
+.modalTitlePostJob{
+    font-size: 2rem;
+}
+
+.noradius{
+    border-radius: 0 !important;
+}
+
+.radiusItem1{
+ border-end-end-radius: 0 ;
+ border-start-end-radius: 0 ;
+ border-right: 0;
+ 
+}
+.radiusItem2{
+ border-top-left-radius: 0;
+ border-bottom-left-radius: 0;
+ 
+}
+
+.borderColor{
+    border-color: #D9D9D9;
+}
+
+.noborder{
+    border-right: 0;
+    border-left: 0;
+}
